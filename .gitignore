@@ -1,0 +1,4 @@
+.commandcode/
+.DS_Store
+state/sync.log
+state/xung-dot-*.md
