@@ -1,392 +1,390 @@
 ---
 name: performance-report
-description: Build a marketing performance report with key metrics, trend analysis, wins and misses, and prioritized optimization recommendations. Use when wrapping a campaign, when preparing weekly, monthly, or quarterly channel summaries for stakeholders, or when you need data translated into an executive summary with next-period priorities.
-argument-hint: "<time period or campaign>"
+description: "Xây dựng báo cáo hiệu quả marketing với chỉ số chính, phân tích xu hướng, điểm thắng/thua và gợi ý tối ưu ưu tiên. Dùng khi kết thúc chiến dịch, khi chuẩn bị tóm tắt kênh hàng tuần/tháng/quý cho stakeholder, hoặc khi cần biến dữ liệu thành tóm tắt điều hành kèm ưu tiên kỳ tới."
+argument-hint: "<thời gian hoặc chiến dịch>"
 ---
 
-# Performance Report
+# Báo cáo hiệu quả (Performance Report)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+Tạo báo cáo hiệu quả marketing với chỉ số chính, phân tích xu hướng, insight và gợi ý tối ưu.
 
-Generate a marketing performance report with key metrics, trend analysis, insights, and optimization recommendations.
+## Kích hoạt
 
-## Trigger
+Người dùng chạy `/performance-report` hoặc yêu cầu báo cáo marketing, phân tích hiệu quả, kết quả chiến dịch hoặc tóm tắt chỉ số.
 
-User runs `/performance-report` or asks for a marketing report, performance analysis, campaign results, or metrics summary.
+## Đầu vào
 
-## Inputs
+1. **Loại báo cáo** — xác định loại báo cáo người dùng cần:
+   - **Campaign report** — hiệu quả của một chiến dịch cụ thể
+   - **Channel report** — hiệu quả qua một kênh cụ thể (email, social, paid, SEO...)
+   - **Content performance** — hiệu quả của các nội dung cụ thể
+   - **Overall marketing report** — tóm tắt cross-channel (hàng tuần, hàng tháng, hàng quý)
+   - **Custom** — phạm vi do người dùng định nghĩa
 
-1. **Report type** — determine which type of report the user needs:
-   - **Campaign report** — performance of a specific campaign
-   - **Channel report** — performance across a specific channel (email, social, paid, SEO, etc.)
-   - **Content performance** — how content pieces are performing
-   - **Overall marketing report** — cross-channel summary (weekly, monthly, quarterly)
-   - **Custom** — user-defined scope
+2. **Thời gian báo cáo** — cửa sổ thời gian (tuần trước, tháng trước, quý trước, khoảng ngày tùy chọn)
 
-2. **Time period** — the reporting window (last week, last month, last quarter, custom date range)
+3. **Nguồn dữ liệu**:
+   - Nếu đã kết nối marketing analytics, khám phá tài khoản và nền tảng nào có sẵn, rồi lấy dữ liệu hiệu quả tự động
+   - Nếu đã kết nối product analytics: lấy dữ liệu hiệu quả tự động
+   - Nếu chưa kết nối: yêu cầu người dùng cung cấp số liệu. Nhắc: "Vui lòng dán hoặc chia sẻ dữ liệu hiệu quả của bạn. Tôi làm việc được với spreadsheet, dữ liệu CSV, ảnh chụp dashboard mô tả bằng chữ, hoặc chỉ cần các con số chính."
 
-3. **Data source**:
-   - If ~~marketing analytics is connected, discover what accounts and platforms are available, then pull performance data automatically
-   - If ~~product analytics is connected: pull performance data automatically
-   - If not connected: ask the user to provide metrics. Prompt with: "Please paste or share your performance data. I can work with spreadsheets, CSV data, dashboard screenshots described in text, or just the key numbers."
+4. **Kỳ so sánh** (không bắt buộc) — kỳ trước hoặc so với cùng kỳ năm trước để có bối cảnh xu hướng
 
-4. **Comparison period** (optional) — prior period or year-over-year for trend context
+5. **Đối tượng đọc** (không bắt buộc) — ai sẽ đọc báo cáo (phong cách tóm tắt điều hành vs chi tiết phân tích)
 
-5. **Stakeholder audience** (optional) — who will read this report (executive summary style vs. detailed analyst view)
+## Cấu trúc báo cáo
 
-## Report Structure
+### 1. Tóm tắt điều hành
+- Tổng quan 2-3 câu về hiệu quả trong kỳ
+- Chỉ số headline kèm hướng xu hướng (tăng/giảm/đi ngang so với kỳ trước)
+- Một thắng lợi chính và một lĩnh vực cần quan tâm
 
-### 1. Executive Summary
-- 2-3 sentence overview of performance in the period
-- Headline metric with trend direction (up/down/flat vs. prior period)
-- One key win and one area of concern
+### 2. Bảng chỉ số chính
 
-### 2. Key Metrics Dashboard
+Trình bày chỉ số cốt lõi trong bảng tóm tắt:
 
-Present core metrics in a summary table:
+| Chỉ số | Kỳ này | Kỳ trước | Thay đổi | Mục tiêu | Trạng thái |
+|--------|---------|---------|----------|----------|-----------|
 
-| Metric | This Period | Prior Period | Change | Target | Status |
-|--------|------------|--------------|--------|--------|--------|
+Chỉ số trạng thái:
+- Đúng hướng (đạt hoặc vượt mục tiêu)
+- Có rủi ro (dưới mục tiêu nhưng trong mức chấp nhận được)
+- Lệch hướng (dưới mục tiêu đáng kể)
 
-Status indicators:
-- On track (meeting or exceeding target)
-- At risk (below target but within acceptable range)
-- Off track (significantly below target)
-
-#### Metrics by Report Type
+#### Chỉ số theo loại báo cáo
 
 **Campaign Report:**
-- Impressions and reach
+- Impressions và reach
 - Click-through rate (CTR)
-- Conversion rate
-- Cost per acquisition (CPA)
-- Return on ad spend (ROAS) or ROI
-- Total conversions/signups/leads
+- Tỷ lệ chuyển đổi
+- Chi phí mỗi chuyển đổi (CPA)
+- Return on ad spend (ROAS) hoặc ROI
+- Tổng chuyển đổi/đăng ký/leads
 
 **Channel Report (Email):**
-- Emails sent, delivered, bounced
+- Email đã gửi, đã deliver, đã bounce
 - Open rate
 - Click-through rate
-- Unsubscribe rate
-- Conversion rate
+- Tỷ lệ hủy đăng ký
+- Tỷ lệ chuyển đổi
 
 **Channel Report (Social):**
-- Impressions and reach
-- Engagement rate (likes, comments, shares)
-- Follower growth
+- Impressions và reach
+- Tỷ lệ tương tác (like, comment, share)
+- Tăng trưởng followers
 - Click-through rate
-- Top-performing posts
+- Bài đăng hiệu quả nhất
 
 **Channel Report (Paid):**
-- Spend
-- Impressions and clicks
+- Chi tiêu
+- Impressions và clicks
 - CTR
-- CPC and CPM
-- Conversions and CPA
+- CPC và CPM
+- Chuyển đổi và CPA
 - ROAS
 
 **Channel Report (SEO/Organic):**
 - Organic sessions
-- Keyword rankings (movement)
-- Pages indexed
-- Backlinks acquired
-- Top-performing pages
+- Thứ hạng từ khóa (thay đổi)
+- Số trang đã index
+- Backlinks thu được
+- Trang hiệu quả nhất
 
 **Content Performance:**
-- Pageviews and unique visitors
-- Time on page
+- Pageview và lượt truy cập duy nhất
+- Thời gian trên trang
 - Bounce rate
-- Social shares
-- Conversions attributed to content
-- Top and bottom performers
+- Số lần share social
+- Chuyển đổi quy về content
+- Nội dung hiệu quả nhất và kém nhất
 
 **Overall Marketing Report:**
-- Total leads generated
+- Tổng leads tạo ra
 - Marketing qualified leads (MQLs)
-- Pipeline contribution
-- Customer acquisition cost (CAC)
-- Channel-by-channel summary
+- Đóng góp vào pipeline
+- Chi phí sở hữu khách hàng (CAC)
+- Tóm tắt từng kênh
 
-### 3. Trend Analysis
-- Performance trend over the period (week-over-week or month-over-month)
-- Notable inflection points and what caused them
-- Seasonal or cyclical patterns observed
-- Comparison to benchmarks or targets
+### 3. Phân tích xu hướng
+- Xu hướng hiệu quả trong kỳ (theo tuần hoặc theo tháng)
+- Điểm ngoặt đáng chú ý và nguyên nhân
+- Mẫu mùa vụ hoặc chu kỳ quan sát được
+- So với benchmark hoặc mục tiêu
 
-### 4. What Worked
-- Top 3-5 wins with specific data
-- Why these performed well (hypothesis)
-- How to replicate or scale
+### 4. Điều gì đã hiệu quả
+- 3-5 thắng lợi hàng đầu kèm dữ liệu cụ thể
+- Vì sao chúng hiệu quả (giả thuyết)
+- Cách lặp lại hoặc mở rộng
 
-### 5. What Needs Improvement
-- Bottom 3-5 performers with specific data
-- Hypotheses for underperformance
-- Recommended fixes
+### 5. Điều gì cần cải thiện
+- 3-5 nội dung hiệu quả thấp nhất kèm dữ liệu cụ thể
+- Giả thuyết hiệu quả thấp
+- Cách sửa đề xuất
 
-### 6. Insights and Observations
-- Patterns in the data that are not obvious from the metrics alone
-- Audience behavior insights
-- Content or creative themes that resonated
-- External factors that may have influenced performance (seasonality, news, competitive moves)
+### 6. Insight và quan sát
+- Mẫu trong dữ liệu không hiển nhiên từ các chỉ số đơn lẻ
+- Insight hành vi đối tượng
+- Chủ đề nội dung hoặc creative thu hút được
+- Yếu tố bên ngoài có thể ảnh hưởng (mùa vụ, tin tức, động thái đối thủ)
 
-### 7. Recommendations
-For each recommendation:
-- What to do
-- Why (linked to a specific insight from the data)
-- Expected impact (high, medium, low)
-- Effort to implement (high, medium, low)
-- Priority (immediate, next sprint, next quarter)
+### 7. Gợi ý
+Với mỗi đề xuất:
+- Việc cần làm
+- Vì sao (gắn với insight cụ thể từ dữ liệu)
+- Tác động kỳ vọng (cao, trung bình, thấp)
+- Công sức triển khai (cao, trung bình, thấp)
+- Mức ưu tiên (ngay, sprint tới, quý tới)
 
-Prioritize recommendations in a 2x2 matrix format:
+Ưu tiên đề xuất theo ma trận 2x2:
 
-| | Low Effort | High Effort |
+| | Công sức thấp | Công sức cao |
 |---|---|---|
-| **High Impact** | Do first | Plan for next sprint |
-| **Low Impact** | Do if time allows | Deprioritize |
+| **Tác động cao** | Làm trước | Lên kế hoạch cho sprint tới |
+| **Tác động thấp** | Làm nếu còn thời gian | Giảm ưu tiên |
 
-### 8. Next Period Focus
-- Top 3 priorities for the upcoming period
-- Tests or experiments to run
-- Targets for key metrics
+### 8. Trọng tâm kỳ tới
+- 3 ưu tiên hàng đầu cho kỳ sắp tới
+- Test hoặc thí nghiệm nên chạy
+- Mục tiêu cho các chỉ số chính
 
-## Metric Definitions and Benchmarks
+## Định nghĩa chỉ số và benchmark
 
 ### Email Marketing
 
-| Metric | Definition | Benchmark Range | What It Tells You |
-|--------|-----------|----------------|-------------------|
-| Delivery rate | Emails delivered / emails sent | 95-99% | List health and sender reputation |
-| Open rate | Unique opens / emails delivered | 15-30% | Subject line and sender effectiveness |
-| Click-through rate (CTR) | Unique clicks / emails delivered | 2-5% | Content relevance and CTA effectiveness |
-| Click-to-open rate (CTOR) | Unique clicks / unique opens | 10-20% | Email content quality (for those who opened) |
-| Unsubscribe rate | Unsubscribes / emails delivered | <0.5% | Content-audience fit and frequency tolerance |
-| Bounce rate | Bounces / emails sent | <2% | List quality and data hygiene |
-| Conversion rate | Conversions / emails delivered | 1-5% | End-to-end email effectiveness |
-| Revenue per email | Total revenue / emails sent | Varies | Direct revenue attribution |
-| List growth rate | (New subscribers - unsubscribes) / total list | 2-5% monthly | Audience building health |
+| Chỉ số | Định nghĩa | Khoảng benchmark | Cho biết điều gì |
+|--------|-----------|----------------|-----------------|
+| Delivery rate | Email delivered / email sent | 95-99% | Sức khỏe danh sách và uy tín gửi |
+| Open rate | Lượt mở duy nhất / email delivered | 15-30% | Hiệu quả subject line và người gửi |
+| Click-through rate (CTR) | Lượt click duy nhất / email delivered | 2-5% | Mức độ liên quan nội dung và CTA |
+| Click-to-open rate (CTOR) | Lượt click duy nhất / lượt mở duy nhất | 10-20% | Chất lượng nội dung email (với người đã mở) |
+| Tỷ lệ hủy đăng ký | Số hủy / email delivered | <0.5% | Mức độ phù hợp nội dung-đối tượng và tần suất |
+| Bounce rate | Số bounce / email sent | <2% | Chất lượng danh sách và vệ sinh dữ liệu |
+| Tỷ lệ chuyển đổi | Chuyển đổi / email delivered | 1-5% | Hiệu quả email end-to-end |
+| Doanh thu mỗi email | Tổng doanh thu / email sent | Tùy ngành | Quy đổi doanh thu trực tiếp |
+| Tốc độ tăng danh sách | (Người đăng ký mới - hủy) / tổng danh sách | 2-5% mỗi tháng | Sức khỏe xây dựng đối tượng |
 
 ### Social Media
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Impressions | Number of times content was displayed | Content distribution and reach |
-| Reach | Number of unique users who saw content | Audience breadth |
-| Engagement rate | (Likes + comments + shares) / reach | Content resonance |
-| Click-through rate | Link clicks / impressions | Traffic driving effectiveness |
-| Follower growth rate | Net new followers / total followers per period | Audience building |
-| Share/Repost rate | Shares / reach | Content virality and advocacy |
-| Video view rate | Views / impressions | Video content hook effectiveness |
-| Video completion rate | Completed views / total views | Video content quality and length fit |
-| Social share of voice | Your mentions / total category mentions | Brand visibility vs. competitors |
+| Chỉ số | Định nghĩa | Cho biết điều gì |
+|--------|-----------|-----------------|
+| Impressions | Số lần nội dung được hiển thị | Phân phối và độ phủ nội dung |
+| Reach | Số người dùng duy nhất đã thấy nội dung | Độ rộng đối tượng |
+| Tỷ lệ tương tác | (Like + comment + share) / reach | Mức độ cộng hưởng nội dung |
+| Click-through rate | Lượt click link / impressions | Hiệu quả thúc đẩy traffic |
+| Tốc độ tăng followers | Followers mới ròng / tổng followers mỗi kỳ | Xây dựng đối tượng |
+| Tỷ lệ share/repost | Số share / reach | Tính viral và advocacy |
+| Tỷ lệ xem video | Views / impressions | Hiệu quả hook video |
+| Tỷ lệ xem hết video | Lượt xem hoàn thành / tổng views | Chất lượng và độ dài video |
+| Share of voice social | Mentions của bạn / tổng mentions ngành | Hiển thị thương hiệu so với đối thủ |
 
-### Paid Advertising (Search and Social)
+### Paid Advertising (Search và Social)
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Impressions | Times ad was shown | Budget utilization and targeting breadth |
-| Click-through rate (CTR) | Clicks / impressions | Ad creative and targeting relevance |
-| Cost per click (CPC) | Total spend / clicks | Cost efficiency of traffic generation |
-| Cost per mille (CPM) | Cost per 1,000 impressions | Awareness cost efficiency |
-| Conversion rate | Conversions / clicks | Landing page and offer effectiveness |
-| Cost per acquisition (CPA) | Total spend / conversions | Full-funnel cost efficiency |
-| Return on ad spend (ROAS) | Revenue / ad spend | Revenue generation efficiency |
-| Quality Score (search) | Google's relevance rating (1-10) | Ad-keyword-landing page alignment |
-| Frequency | Average times a user sees the ad | Ad fatigue risk |
-| View-through conversions | Conversions from users who saw but did not click | Display/awareness campaign influence |
+| Chỉ số | Định nghĩa | Cho biết điều gì |
+|--------|-----------|-----------------|
+| Impressions | Số lần quảng cáo được hiển thị | Mức dùng ngân sách và độ rộng targeting |
+| Click-through rate (CTR) | Clicks / impressions | Mức độ liên quan creative và targeting |
+| Chi phí mỗi click (CPC) | Tổng chi tiêu / clicks | Hiệu quả chi phí traffic |
+| Chi phí mỗi 1000 hiển thị (CPM) | Tổng chi tiêu / (impressions/1000) | Hiệu quả chi phí nhận diện |
+| Tỷ lệ chuyển đổi | Chuyển đổi / clicks | Hiệu quả landing page và offer |
+| Chi phí mỗi chuyển đổi (CPA) | Tổng chi tiêu / chuyển đổi | Hiệu quả chi phí toàn funnel |
+| Return on ad spend (ROAS) | Doanh thu / chi tiêu quảng cáo | Hiệu quả tạo doanh thu |
+| Quality Score (search) | Điểm liên quan của Google (1-10) | Mức phù hợp ad-keyword-landing page |
+| Frequency | Số lần trung bình người dùng thấy quảng cáo | Rủi ro ad fatigue |
+| Chuyển đổi view-through | Chuyển đổi từ người dùng đã thấy nhưng không click | Ảnh hưởng chiến dịch display/awareness |
 
 ### SEO / Organic Search
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Organic sessions | Visits from organic search | SEO effectiveness and content reach |
-| Keyword rankings | Position for target keywords | Search visibility |
-| Organic CTR | Clicks / impressions in search results | Title and meta description effectiveness |
-| Pages indexed | Number of pages in search index | Crawlability and site health |
-| Domain authority | Third-party authority score | Overall site strength |
-| Backlinks | Number of external sites linking to you | Content authority and off-page SEO |
-| Page load speed | Time to interactive | User experience and ranking factor |
-| Organic conversion rate | Organic conversions / organic sessions | Content quality and intent alignment |
-| Top entry pages | Most-visited pages from organic search | Content driving the most organic traffic |
+| Chỉ số | Định nghĩa | Cho biết điều gì |
+|--------|-----------|-----------------|
+| Organic sessions | Lượt truy cập từ tìm kiếm tự nhiên | Hiệu quả SEO và độ phủ nội dung |
+| Thứ hạng từ khóa | Vị trí với các từ khóa mục tiêu | Hiển thị trên tìm kiếm |
+| Organic CTR | Clicks / impressions trên kết quả tìm kiếm | Hiệu quả tiêu đề và meta description |
+| Số trang đã index | Số trang trong chỉ mục tìm kiếm | Crawlability và sức khỏe website |
+| Domain authority | Điểm thẩm quyền bên thứ ba | Sức mạnh tổng thể của website |
+| Backlinks | Số website bên ngoài link tới | Thẩm quyền nội dung và SEO off-page |
+| Tốc độ tải trang | Thời gian đến interactive | UX và yếu tố xếp hạng |
+| Tỷ lệ chuyển đổi organic | Chuyển đổi organic / organic sessions | Chất lượng nội dung và ý định |
+| Trang vào hàng đầu | Trang được truy cập nhiều nhất từ organic | Nội dung thúc đẩy traffic organic nhất |
 
 ### Content Marketing
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Pageviews | Total views of content pages | Content reach and distribution |
-| Unique visitors | Distinct users viewing content | Audience size |
-| Average time on page | Time spent on content pages | Content engagement and depth |
-| Bounce rate | Single-page sessions / total sessions | Content-audience fit and UX |
-| Scroll depth | How far users scroll on a page | Content engagement through the piece |
-| Social shares | Times content was shared on social | Content resonance and virality |
-| Backlinks earned | External links to content | Content authority and SEO value |
-| Lead generation | Leads attributed to content | Content conversion effectiveness |
-| Content ROI | Revenue attributed / content production cost | Overall content investment return |
+| Chỉ số | Định nghĩa | Cho biết điều gì |
+|--------|-----------|-----------------|
+| Pageview | Tổng lượt xem các trang nội dung | Độ phủ và phân phối nội dung |
+| Lượt truy cập duy nhất | Người dùng riêng biệt xem nội dung | Quy mô đối tượng |
+| Thời gian trung bình trên trang | Thời gian dành trên các trang nội dung | Mức độ tương tác và độ sâu |
+| Bounce rate | Session một trang / tổng sessions | Mức độ phù hợp nội dung-đối tượng và UX |
+| Độ sâu cuộn | Người dùng cuộn xa đến đâu trên trang | Mức độ tương tác xuyên suốt nội dung |
+| Share social | Số lần nội dung được share trên social | Mức độ cộng hưởng và viral |
+| Backlinks thu được | Link bên ngoài tới nội dung | Thẩm quyền nội dung và giá trị SEO |
+| Tạo leads | Leads quy về nội dung | Hiệu quả chuyển đổi của nội dung |
+| ROI nội dung | Doanh thu quy về / chi phí sản xuất nội dung | Hiệu quả đầu tư nội dung tổng thể |
 
 ### Overall Marketing / Pipeline
 
-| Metric | Definition | What It Tells You |
-|--------|-----------|-------------------|
-| Marketing qualified leads (MQLs) | Leads meeting marketing qualification criteria | Top-of-funnel effectiveness |
-| Sales qualified leads (SQLs) | MQLs accepted by sales | Lead quality |
-| MQL to SQL conversion rate | SQLs / MQLs | Marketing-sales alignment and lead quality |
-| Pipeline generated | Dollar value of opportunities created | Marketing impact on revenue |
-| Pipeline velocity | How fast deals move through pipeline | Campaign urgency and quality |
-| Customer acquisition cost (CAC) | Total marketing + sales cost / new customers | Efficiency of customer acquisition |
-| CAC payback period | Months to recover CAC from revenue | Unit economics health |
-| Marketing-sourced revenue | Revenue from marketing-originated deals | Direct marketing contribution |
-| Marketing-influenced revenue | Revenue from deals where marketing touched | Broader marketing impact |
+| Chỉ số | Định nghĩa | Cho biết điều gì |
+|--------|-----------|-----------------|
+| Marketing qualified leads (MQLs) | Leads đạt tiêu chí chất lượng marketing | Hiệu quả top-of-funnel |
+| Sales qualified leads (SQLs) | MQLs được sales chấp nhận | Chất lượng leads |
+| Tỷ lệ chuyển đổi MQL-to-SQL | SQLs / MQLs | Mức độ căn chỉnh marketing-sales và chất lượng leads |
+| Pipeline tạo ra | Giá trị dollar của cơ hội tạo ra | Tác động marketing lên doanh thu |
+| Tốc độ pipeline | Deal di chuyển nhanh thế nào qua pipeline | Mức khẩn và chất lượng chiến dịch |
+| Chi phí sở hữu khách hàng (CAC) | Tổng chi phí marketing + sales / khách hàng mới | Hiệu quả sở hữu khách hàng |
+| Thời gian hoàn vốn CAC | Số tháng thu hồi CAC từ doanh thu | Sức khỏe unit economics |
+| Doanh thu từ marketing | Doanh thu từ deal có nguồn gốc marketing | Đóng góp trực tiếp của marketing |
+| Doanh thu có marketing ảnh hưởng | Doanh thu từ deal có marketing chạm tới | Tác động marketing rộng hơn |
 
-## Reporting Templates by Cadence
+## Template báo cáo theo nhịp
 
-### Weekly Marketing Report
-Quick-scan format for team standups:
-- **Top 3 metrics** with week-over-week change
-- **What worked** this week (1-2 bullet points with data)
-- **What needs attention** (1-2 bullet points with data)
-- **This week's priorities** (3-5 action items)
+### Báo cáo marketing hàng tuần
+Format quét nhanh cho standup của team:
+- **3 chỉ số hàng đầu** kèm thay đổi theo tuần
+- **Điều gì hiệu quả** tuần này (1-2 bullet kèm dữ liệu)
+- **Điều gì cần chú ý** (1-2 bullet kèm dữ liệu)
+- **Ưu tiên tuần này** (3-5 việc hành động)
 
-### Monthly Marketing Report
-Standard stakeholder report:
-1. Executive summary (3-5 sentences)
-2. Key metrics dashboard (table with MoM and target comparison)
-3. Channel-by-channel performance summary
-4. Campaign highlights and results
-5. What worked and what did not (with hypotheses)
-6. Recommendations and next month priorities
-7. Budget spend vs. plan
+### Báo cáo marketing hàng tháng
+Báo cáo stakeholder chuẩn:
+1. Tóm tắt điều hành (3-5 câu)
+2. Bảng chỉ số chính (bảng kèm so với tháng trước và mục tiêu)
+3. Tóm tắt hiệu quả từng kênh
+4. Điểm nổi bật và kết quả chiến dịch
+5. Điều gì hiệu quả và không hiệu quả (kèm giả thuyết)
+6. Gợi ý và ưu tiên tháng tới
+7. Ngân sách chi vs kế hoạch
 
-### Quarterly Business Review (QBR)
-Strategic review for leadership:
-1. Quarter performance vs. goals
-2. Year-to-date trajectory
-3. Channel ROI analysis
-4. Campaign performance summary
-5. Competitive and market observations
-6. Strategic recommendations for next quarter
-7. Budget request and allocation plan
-8. Key experiments and learnings
+### Review kinh doanh hàng quý (QBR)
+Review chiến lược cho lãnh đạo:
+1. Hiệu quả quý so với mục tiêu
+2. Lộ trình year-to-date
+3. Phân tích ROI từng kênh
+4. Tóm tắt hiệu quả chiến dịch
+5. Quan sát cạnh tranh và thị trường
+6. Gợi ý chiến lược cho quý tới
+7. Đề xuất ngân sách và phân bổ
+8. Thí nghiệm chính và bài học rút ra
 
-### Dashboard Design Principles
-- Lead with the metrics that map to business objectives (not vanity metrics)
-- Show trends over time, not just point-in-time snapshots
-- Include comparison context: prior period, target, benchmark
-- Use consistent color coding: green (on track), yellow (at risk), red (off track)
-- Group metrics by funnel stage or business question
-- Keep dashboards to one page/screen — detail goes in appendix
-- Update cadence should match decision cadence (real-time for paid, weekly for content)
+### Nguyên tắc thiết kế dashboard
+- Ưu tiên chỉ số gắn với mục tiêu kinh doanh (không phải vanity metrics)
+- Thể hiện xu hướng theo thời gian, không chỉ snapshot một thời điểm
+- Thêm bối cảnh so sánh: kỳ trước, mục tiêu, benchmark
+- Dùng mã màu nhất quán: xanh (đúng hướng), vàng (có rủi ro), đỏ (lệch hướng)
+- Nhóm chỉ số theo giai đoạn funnel hoặc câu hỏi kinh doanh
+- Giữ dashboard trong một trang/màn hình — chi tiết đưa vào appendix
+- Tần suất cập nhật theo nhịp quyết định (real-time cho paid, hàng tuần cho content)
 
-## Trend Analysis and Forecasting
+## Phân tích xu hướng và dự báo
 
-### Trend Identification
-When analyzing performance data, look for:
+### Xác định xu hướng
+Khi phân tích dữ liệu hiệu quả, tìm:
 
-1. **Directional trends**: is the metric consistently going up, down, or flat over 4+ periods?
-2. **Inflection points**: where did performance change direction and what happened then?
-3. **Seasonality**: are there predictable patterns by day of week, month, or quarter?
-4. **Anomalies**: one-time spikes or drops — what caused them and are they repeatable?
-5. **Leading indicators**: which metrics change first and predict future outcomes?
+1. **Xu hướng định hướng**: chỉ số tăng, giảm hay đi ngang nhất quán qua 4+ kỳ?
+2. **Điểm ngoặt**: hiệu quả đổi hướng ở đâu và điều gì đã xảy ra lúc đó?
+3. **Mùa vụ**: có mẫu dự đoán được theo ngày trong tuần, tháng hoặc quý?
+4. **Bất thường**: spike hoặc drop một lần — nguyên nhân là gì và có lặp lại được không?
+5. **Chỉ số dẫn đường (leading indicators)**: chỉ số nào thay đổi trước và dự báo kết quả tương lai?
 
-### Trend Analysis Process
-1. Chart the metric over time (at least 8-12 data points for meaningful trends)
-2. Identify the overall direction (upward, downward, flat, cyclical)
-3. Calculate the rate of change (is it accelerating or decelerating?)
-4. Overlay key events (campaigns launched, product changes, market events)
-5. Compare to benchmarks or targets
-6. Identify correlations with other metrics
-7. Form hypotheses about causation (and plan tests to validate)
+### Quy trình phân tích xu hướng
+1. Vẽ chỉ số theo thời gian (ít nhất 8-12 điểm dữ liệu mới có ý nghĩa)
+2. Xác định hướng tổng thể (tăng, giảm, ngang, chu kỳ)
+3. Tính tốc độ thay đổi (đang tăng tốc hay chậm lại?)
+4. Phủ lên các sự kiện chính (chiến dịch ra mắt, thay đổi sản phẩm, sự kiện thị trường)
+5. So với benchmark hoặc mục tiêu
+6. Xác định tương quan với các chỉ số khác
+7. Hình thành giả thuyết về nguyên nhân (và lên kế hoạch test để kiểm chứng)
 
-### Simple Forecasting Approaches
-- **Linear projection**: extend the current trend line forward (useful for stable metrics)
-- **Moving average**: smooth out noise by averaging the last 3-6 periods
-- **Year-over-year comparison**: use last year's pattern as a baseline, adjusted for growth rate
-- **Funnel math**: forecast outputs from inputs (e.g., if we generate X leads at Y conversion rate, we will get Z customers)
-- **Scenario modeling**: create best case, expected case, and worst case projections
+### Phương pháp dự báo đơn giản
+- **Dự báo tuyến tính**: kéo dài đường xu hướng hiện tại về phía trước (hữu ích với chỉ số ổn định)
+- **Trung bình di động**: làm mượt nhiễu bằng cách lấy trung bình 3-6 kỳ gần nhất
+- **So sánh cùng kỳ năm trước**: dùng mẫu năm ngoái làm baseline, điều chỉnh theo tốc độ tăng trưởng
+- **Phép toán funnel**: dự báo đầu ra từ đầu vào (ví dụ: tạo X leads với tỷ lệ chuyển đổi Y sẽ được Z khách hàng)
+- **Mô hình kịch bản**: tạo kịch bản tốt nhất, kỳ vọng và xấu nhất
 
-### Forecasting Caveats
-- Short-term forecasts (1-3 months) are more reliable than long-term
-- Forecasts based on fewer than 12 data points should be flagged as low confidence
-- External factors (market shifts, competitive moves, economic changes) can invalidate trend-based forecasts
-- Always present forecasts as ranges, not exact numbers
+### Lưu ý dự báo
+- Dự báo ngắn hạn (1-3 tháng) tin cậy hơn dài hạn
+- Dự báo dựa trên ít hơn 12 điểm dữ liệu nên gắn cờ độ tin cậy thấp
+- Yếu tố bên ngoài (thị trường, đối thủ, kinh tế) có thể làm mất hiệu lực dự báo theo xu hướng
+- Luôn trình bày dự báo dưới dạng khoảng, không phải số chính xác
 
-## Attribution Modeling Basics
+## Cơ bản về mô hình attribution
 
-### What Is Attribution?
-Attribution determines which marketing touchpoints get credit for a conversion. This matters because buyers typically interact with multiple channels before converting.
+### Attribution là gì?
+Attribution xác định điểm chạm marketing nào được ghi công cho một chuyển đổi. Quan trọng vì người mua thường tương tác nhiều kênh trước khi chuyển đổi.
 
-### Common Attribution Models
+### Mô hình attribution phổ biến
 
-| Model | How It Works | Best For | Limitation |
-|-------|-------------|----------|------------|
-| Last touch | 100% credit to last interaction before conversion | Understanding final conversion triggers | Ignores awareness and nurture |
-| First touch | 100% credit to first interaction | Understanding top-of-funnel effectiveness | Ignores nurture and conversion drivers |
-| Linear | Equal credit to all touchpoints | Fair representation of all channels | Does not reflect relative impact |
-| Time decay | More credit to touchpoints closer to conversion | Balanced view favoring recent interactions | May undervalue awareness |
-| Position-based (U-shaped) | 40% first, 40% last, 20% split among middle | Valuing both discovery and conversion | Somewhat arbitrary weighting |
-| Data-driven | Algorithmic credit based on conversion patterns | Most accurate representation | Requires significant data volume |
+| Mô hình | Cách hoạt động | Phù hợp nhất | Hạn chế |
+|---------|---------------|--------------|---------|
+| Last touch | 100% ghi công cho tương tác cuối trước chuyển đổi | Hiểu trigger cuối cùng | Bỏ qua awareness và nurture |
+| First touch | 100% ghi công cho tương tác đầu tiên | Hiểu hiệu quả top-of-funnel | Bỏ qua nurture và yếu tố chuyển đổi |
+| Linear | Chia đều cho mọi điểm chạm | Đại diện công bằng mọi kênh | Không phản ánh tác động tương đối |
+| Time decay | Nhấn vào điểm chạm gần chuyển đổi hơn | Góc nhìn cân bằng nghiêng về gần đây | Có thể đánh giá thấp awareness |
+| Position-based (U-shaped) | 40% đầu, 40% cuối, 20% chia cho các điểm giữa | Đánh giá cả discovery và conversion | Trọng số hơi tùy tiện |
+| Data-driven | Thuật toán ghi công dựa trên mẫu chuyển đổi | Đại diện chính xác nhất | Cần lượng dữ liệu lớn |
 
-### Attribution Practical Guidance
-- Start with last-touch attribution if you have no model in place — it is the simplest and most actionable
-- Compare first-touch and last-touch to understand which channels drive awareness vs. conversion
-- Use position-based (U-shaped) as a reasonable middle ground for most B2B companies
-- Data-driven attribution requires high conversion volume to be statistically meaningful
-- No model is perfect — use attribution directionally, not as absolute truth
-- Multi-touch attribution is better than single-touch, but any model is better than none
+### Hướng dẫn thực hành attribution
+- Bắt đầu với last-touch attribution nếu chưa có mô hình — đơn giản và khả thi nhất
+- So sánh first-touch và last-touch để hiểu kênh nào thúc đẩy awareness vs conversion
+- Dùng position-based (U-shaped) làm điểm giữa hợp lý cho hầu hết công ty B2B
+- Data-driven attribution cần lượng chuyển đổi lớn mới có ý nghĩa thống kê
+- Không mô hình nào hoàn hảo — dùng attribution theo hướng, không phải sự thật tuyệt đối
+- Multi-touch attribution tốt hơn single-touch, nhưng mô hình nào cũng hơn không có mô hình
 
-### Attribution Pitfalls
-- Do not optimize one channel in isolation based on single-touch attribution
-- Awareness channels (display, social, PR) will always look bad in last-touch models
-- Conversion channels (search, retargeting) will always look bad in first-touch models
-- Self-reported attribution ("how did you hear about us?") provides useful qualitative color but is unreliable as quantitative data
-- Cross-device and cross-channel tracking gaps mean attribution data is always incomplete
+### Bẫy attribution
+- Đừng tối ưu một kênh đơn lẻ dựa trên single-touch attribution
+- Kênh awareness (display, social, PR) sẽ luôn trông tệ trong mô hình last-touch
+- Kênh conversion (search, retargeting) sẽ luôn trông tệ trong mô hình first-touch
+- Attribution tự báo ("bạn biết chúng tôi từ đâu?") mang lại góc nhìn định tính hữu ích nhưng không tin cậy về mặt định lượng
+- Khoảng trống tracking cross-device và cross-channel khiến dữ liệu attribution luôn không đầy đủ
 
-## Optimization Recommendations Framework
+## Framework gợi ý tối ưu
 
-### Optimization Process
-1. **Identify**: which metrics are underperforming vs. target or benchmark?
-2. **Diagnose**: where in the funnel is the problem? (impressions, clicks, conversions, retention)
-3. **Hypothesize**: what is causing the underperformance? (audience, message, creative, offer, timing, technical)
-4. **Prioritize**: which fixes will have the biggest impact with the least effort?
-5. **Test**: design an experiment to validate the hypothesis
-6. **Measure**: did the change improve the metric?
-7. **Scale or iterate**: roll out wins broadly; iterate on inconclusive or failed tests
+### Quy trình tối ưu
+1. **Xác định**: chỉ số nào dưới hiệu quả so với mục tiêu hoặc benchmark?
+2. **Chẩn đoán**: vấn đề nằm ở đâu trong funnel? (impressions, clicks, chuyển đổi, giữ chân)
+3. **Giả thuyết**: nguyên nhân hiệu quả thấp là gì? (đối tượng, thông điệp, creative, offer, timing, kỹ thuật)
+4. **Ưu tiên**: cách sửa nào tác động lớn nhất với công sức ít nhất?
+5. **Thử nghiệm**: thiết kế thí nghiệm để kiểm chứng giả thuyết
+6. **Đo lường**: thay đổi có cải thiện chỉ số không?
+7. **Mở rộng hoặc lặp lại**: nhân rộng thắng lợi diện rộng; lặp lại với test chưa kết luận hoặc thất bại
 
-### Optimization Levers by Funnel Stage
+### Đòn bẩy tối ưu theo giai đoạn funnel
 
-| Funnel Stage | Problem Signal | Optimization Levers |
+| Giai đoạn funnel | Tín hiệu vấn đề | Đòn bẩy tối ưu |
 |-------------|---------------|---------------------|
-| Awareness | Low impressions, low reach | Budget, targeting, channel mix, creative format |
-| Interest | Low CTR, low engagement | Ad creative, headlines, content hooks, audience targeting |
-| Consideration | High bounce rate, low time on page | Landing page content, page speed, content relevance, UX |
-| Conversion | Low conversion rate | Offer, CTA, form length, trust signals, page layout |
-| Retention | High churn, low repeat engagement | Onboarding, email nurture, product experience, support |
+| Awareness | Impressions thấp, reach thấp | Ngân sách, targeting, channel mix, định dạng creative |
+| Interest | CTR thấp, tương tác thấp | Creative quảng cáo, headline, hook nội dung, targeting đối tượng |
+| Consideration | Bounce rate cao, thời gian trên trang thấp | Nội dung landing page, tốc độ trang, mức độ liên quan nội dung, UX |
+| Conversion | Tỷ lệ chuyển đổi thấp | Offer, CTA, độ dài form, tín hiệu tin cậy, layout trang |
+| Retention | Churn cao, tương tác lại thấp | Onboarding, email nurture, trải nghiệm sản phẩm, support |
 
-### Testing Best Practices
-- Test one variable at a time for clean results
-- Define the success metric before launching the test
-- Calculate required sample size before starting (do not end tests early)
-- Run tests for a minimum of one full business cycle (typically one week for B2B)
-- Document all tests and results, regardless of outcome
-- Share learnings across the team — failed tests are valuable information
-- A test that confirms the status quo is not a failure — it builds confidence in your current approach
+### Thực hành tốt khi testing
+- Test một biến mỗi lần để kết quả sạch
+- Định nghĩa chỉ số thành công trước khi chạy test
+- Tính kích thước mẫu cần thiết trước khi bắt đầu (đừng kết thúc test sớm)
+- Chạy test tối thiểu một chu kỳ kinh doanh đầy đủ (thường một tuần với B2B)
+- Ghi lại mọi test và kết quả, bất kể kết quả thế nào
+- Chia sẻ bài học trong team — test thất bại là thông tin giá trị
+- Test khẳng định status quo không phải thất bại — nó xây niềm tin vào cách làm hiện tại
 
-### Continuous Optimization Cadence
-- **Daily**: monitor paid campaigns for budget pacing, anomalies, and disapproved ads
-- **Weekly**: review channel performance, pause underperformers, scale winners
-- **Bi-weekly**: refresh ad creative and test new variants
-- **Monthly**: full performance review, identify new optimization opportunities, update forecasts
-- **Quarterly**: strategic review of channel mix, budget allocation, and targeting strategy
+### Nhịp tối ưu liên tục
+- **Hàng ngày**: theo dõi chiến dịch paid về pacing ngân sách, bất thường, quảng cáo bị từ chối
+- **Hàng tuần**: review hiệu quả từng kênh, tạm dừng nội dung yếu, mở rộng nội dung thắng
+- **Hai tuần một lần**: làm mới creative quảng cáo và test biến thể mới
+- **Hàng tháng**: review hiệu quả toàn diện, xác định cơ hội tối ưu mới, cập nhật dự báo
+- **Hàng quý**: review chiến lược về channel mix, phân bổ ngân sách, chiến lược targeting
 
-## Output Formatting
+## Định dạng đầu ra
 
-- Use tables for data presentation
-- Bold key numbers and trends
-- Keep the executive summary concise (suitable for forwarding to leadership)
-- Include a "detailed appendix" section for granular data if the user provided a lot of metrics
+- Dùng bảng để trình bày dữ liệu
+- In đậm số liệu chính và xu hướng
+- Giữ tóm tắt điều hành ngắn gọn (phù hợp để forward cho lãnh đạo)
+- Thêm mục "appendix chi tiết" cho dữ liệu phức tạp nếu người dùng cung cấp nhiều chỉ số
 
-## After the Report
+## Sau báo cáo
 
-Ask: "Would you like me to:
-- Create a slide-ready summary of these results?
-- Draft a stakeholder email with the key takeaways?
-- Dive deeper into any specific metric or channel?
-- Set up a reporting template you can reuse next period?"
+Hỏi: "Bạn muốn tôi:
+- Tạo bản tóm tắt slide-ready từ kết quả này?
+- Soạn thảo email stakeholder với điểm chính?
+- Đi sâu vào một chỉ số hoặc kênh cụ thể?
+- Thiết lập template báo cáo để tái dùng kỳ tới?"

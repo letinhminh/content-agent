@@ -1,157 +1,157 @@
 ---
 name: content-creation
-description: Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
+description: "Soạn thảo nội dung marketing đa kênh — blog post, social media, email newsletter, landing page, thông cáo báo chí, case study. Dùng khi viết bất kỳ nội dung marketing nào, khi cần định dạng theo từng kênh, copy tối ưu SEO, lựa chọn headline hoặc call to action."
 user-invocable: false
 ---
 
-# Content Creation Skill
+# Tạo nội dung (Content Creation Skill)
 
-Guidelines and frameworks for creating effective marketing content across channels.
+Hướng dẫn và framework để tạo nội dung marketing hiệu quả qua nhiều kênh.
 
-## Content Type Templates
+## Template theo loại nội dung
 
-### Blog Post Structure
-1. **Headline** — clear, benefit-driven, includes primary keyword (aim for 60 characters or less for SEO)
-2. **Introduction** (100-150 words) — hook the reader with a question, statistic, bold claim, or relatable scenario. State what the post will cover. Include primary keyword.
-3. **Body sections** (3-5 sections) — each with a descriptive subheading (H2). Use H3 for subsections. One core idea per section with supporting evidence, examples, or data.
-4. **Conclusion** (75-100 words) — summarize key takeaways, reinforce the main message, include a call to action.
-5. **Meta description** — under 160 characters, includes primary keyword, compels the click.
+### Cấu trúc Blog Post
+1. **Headline** — rõ ràng, nhấn vào lợi ích, chứa từ khóa chính (nhắm tới 60 ký tự hoặc ít hơn cho SEO)
+2. **Mở bài** (100-150 từ) — hook độc giả bằng câu hỏi, thống kê, phát biểu táo bạo hoặc kịch bản gần gũi. Nêu nội dung bài sẽ bao phủ. Chứa từ khóa chính.
+3. **Mục thân** (3-5 mục) — mỗi mục có tiêu đề phụ mô tả (H2). Dùng H3 cho mục con. Một ý chính mỗi mục kèm bằng chứng, ví dụ hoặc dữ liệu hỗ trợ.
+4. **Kết bài** (75-100 từ) — tóm tắt điểm chính, củng cố thông điệp chính, kèm call to action.
+5. **Meta description** — dưới 160 ký tự, chứa từ khóa chính, thôi thúc click.
 
-### Social Media Post Structure
-- **Hook** — first line grabs attention (question, bold statement, number)
-- **Body** — 2-4 concise points or a short narrative
-- **CTA** — what should the reader do next (comment, click, share, tag)
-- **Hashtags** — 3-5 relevant hashtags (platform-dependent)
+### Cấu trúc bài đăng mạng xã hội
+- **Hook** — dòng đầu tiên thu hút (câu hỏi, phát biểu táo bạo, con số)
+- **Thân** — 2-4 điểm ngắn gọn hoặc một câu chuyện ngắn
+- **CTA** — độc giả nên làm gì tiếp theo (comment, click, share, tag)
+- **Hashtag** — 3-5 hashtag phù hợp (tùy nền tảng)
 
-### Email Newsletter Structure
-- **Subject line** — under 50 characters, creates curiosity or states clear value
-- **Preview text** — complements the subject line, does not repeat it
-- **Header/hero** — visual anchor and one-line value statement
-- **Body sections** — 2-3 content blocks, each scannable with a bold intro sentence
-- **Primary CTA** — one clear action per email
-- **Footer** — unsubscribe link, company info, social links
+### Cấu trúc Email Newsletter
+- **Subject line** — dưới 50 ký tự, tạo tò mò hoặc nêu rõ giá trị
+- **Preview text** — bổ sung cho subject line, không lặp lại
+- **Header/hero** — điểm neo hình ảnh và câu giá trị một dòng
+- **Mục thân** — 2-3 khối nội dung, mỗi khối dễ quét với câu mở đầu in đậm
+- **CTA chính** — một hành động rõ ràng mỗi email
+- **Footer** — link hủy đăng ký, thông tin công ty, link social
 
-### Landing Page Structure
-- **Headline** — primary benefit in under 10 words
-- **Subheadline** — elaborates on the headline with supporting context
-- **Hero section** — headline, subheadline, primary CTA, supporting image or video
-- **Value propositions** — 3-4 benefit-driven sections with icons or images
-- **Social proof** — testimonials, logos, stats, case study snippets
-- **Objection handling** — FAQ or trust signals
-- **Final CTA** — repeat the primary call to action
+### Cấu trúc Landing Page
+- **Headline** — lợi ích chính dưới 10 từ
+- **Subheadline** — làm rõ headline với bối cảnh hỗ trợ
+- **Hero section** — headline, subheadline, CTA chính, hình ảnh hoặc video hỗ trợ
+- **Value proposition** — 3-4 mục nhấn vào lợi ích kèm icon hoặc hình ảnh
+- **Social proof** — testimonial, logo, thống kê, đoạn case study
+- **Xử lý phản đối** — FAQ hoặc tín hiệu tin cậy
+- **CTA cuối** — lặp lại call to action chính
 
-### Press Release Structure
-- **Headline** — factual, newsworthy, under 80 characters
-- **Subheadline** — optional, adds context
-- **Dateline** — city, state, date
-- **Lead paragraph** — who, what, when, where, why in 2-3 sentences
-- **Body paragraphs** — supporting details, quotes, context
-- **Boilerplate** — company description (standardized)
-- **Media contact** — name, email, phone
+### Cấu trúc Thông cáo báo chí
+- **Headline** — thực tế, có tính tin tức, dưới 80 ký tự
+- **Subheadline** — không bắt buộc, thêm bối cảnh
+- **Dateline** — thành phố, bang, ngày
+- **Đoạn lead** — ai, cái gì, khi nào, ở đâu, tại sao trong 2-3 câu
+- **Đoạn thân** — chi tiết hỗ trợ, quote, bối cảnh
+- **Boilerplate** — mô tả công ty (chuẩn hóa)
+- **Liên hệ báo chí** — tên, email, điện thoại
 
-### Case Study Structure
-- **Title** — "[Customer] achieves [result] with [product]"
-- **Snapshot** — customer name, industry, company size, product used, key result (sidebar or callout box)
-- **Challenge** — what problem the customer faced
-- **Solution** — what was implemented and how
-- **Results** — quantified outcomes with specific metrics
-- **Quote** — customer testimonial
-- **CTA** — learn more, get a demo, read more case studies
+### Cấu trúc Case Study
+- **Tiêu đề** — "[Khách hàng] đạt [kết quả] với [sản phẩm]"
+- **Snapshot** — tên khách hàng, ngành, quy mô công ty, sản phẩm dùng, kết quả chính (sidebar hoặc hộp callout)
+- **Thách thức** — vấn đề khách hàng gặp phải
+- **Giải pháp** — đã triển khai gì và bằng cách nào
+- **Kết quả** — kết quả định lượng kèm số liệu cụ thể
+- **Quote** — testimonial của khách hàng
+- **CTA** — tìm hiểu thêm, đặt demo, đọc case study khác
 
-## Writing Best Practices by Channel
+## Thực hành viết tốt theo từng kênh
 
 ### Blog
-- Write at an 8th-grade reading level for broad audiences; adjust up for technical audiences
-- Use short paragraphs (2-4 sentences)
-- Include subheadings every 200-300 words
-- Use bullet points and numbered lists to break up text
-- Include at least one data point, example, or quote per section
-- Write in active voice
-- Front-load key information in each section
+- Viết ở trình độ đọc lớp 8 cho đối tượng rộng; nâng lên cho đối tượng kỹ thuật
+- Đoạn ngắn (2-4 câu)
+- Đặt tiêu đề phụ mỗi 200-300 từ
+- Dùng bullet point và danh sách số để phá vỡ khối text
+- Mỗi mục ít nhất một dữ liệu, ví dụ hoặc quote
+- Viết giọng chủ động
+- Đưa thông tin chính lên đầu mỗi mục
 
 ### Social Media
-- **LinkedIn**: professional but human, paragraph breaks for readability, personal stories and lessons perform well, 1,300 characters is the sweet spot before "see more"
-- **Twitter/X**: concise and punchy, strong opening words, threads for longer narratives, engage with replies
-- **Instagram**: visual-first captions, storytelling hooks, line breaks for readability, hashtags in first comment or at end
-- **Facebook**: conversational tone, questions drive comments, shorter posts (under 80 characters) get more engagement for links
+- **LinkedIn**: chuyên nghiệp nhưng gần gũi, ngắt dòng cho dễ đọc, câu chuyện cá nhân và bài học hiệu quả cao, 1.300 ký tự là điểm ngọt trước "xem thêm"
+- **Twitter/X**: ngắn gọn, súc tích, từ mở đầu mạnh, dùng thread cho narrative dài, tương tác với reply
+- **Instagram**: caption ưu tiên hình ảnh, hook kể chuyện, ngắt dòng cho dễ đọc, hashtag ở comment đầu hoặc cuối bài
+- **Facebook**: tone gần gũi, câu hỏi thúc đẩy comment, bài ngắn (dưới 80 ký tự) có tương tác link cao hơn
+- **TikTok**: hook 3 giây, kịch bản nói tự nhiên, CTA rõ ràng
 
 ### Email
-- Write subject lines that create urgency, curiosity, or state clear value
-- Personalize where possible (name, company, behavior)
-- One primary CTA per email — make it visually distinct
-- Keep body copy scannable: bold key phrases, short paragraphs, bullet points
-- Test everything: subject lines, send times, CTA copy, layout
-- Mobile-first: most email is read on mobile
+- Viết subject line tạo cảm giác khẩn, tò mò hoặc nêu rõ giá trị
+- Cá nhân hóa khi có thể (tên, công ty, hành vi)
+- Một CTA chính mỗi email — làm nổi bật rõ ràng
+- Thân dễ quét: in đậm cụm từ chính, đoạn ngắn, bullet point
+- Test mọi thứ: subject line, thời gian gửi, copy CTA, layout
+- Ưu tiên mobile: hầu hết email được đọc trên điện thoại
 
-### Web (Landing Pages, Product Pages)
-- Lead with benefits, not features
-- Use "you" language — speak to the reader directly
-- Minimize jargon unless the audience expects it
-- Every section should answer "so what?" from the reader's perspective
-- Reduce friction: fewer form fields, clear next steps, trust signals near CTAs
+### Web (Landing page, trang sản phẩm)
+- Nhấn vào lợi ích, không phải tính năng
+- Dùng ngôn ngữ "bạn" — nói trực tiếp với độc giả
+- Giảm jargon trừ khi đối tượng mong đợi
+- Mỗi mục trả lời "vậy thì sao?" từ góc nhìn độc giả
+- Giảm ma sát: ít trường form hơn, bước tiếp theo rõ ràng, tín hiệu tin cậy gần CTA
 
-## SEO Fundamentals for Content
+## Nguyên tắc SEO cho nội dung
 
-### Keyword Strategy
-- Identify one primary keyword and 2-3 secondary keywords per piece
-- Use the primary keyword in: headline, first paragraph, one subheading, meta description, URL slug
-- Use secondary keywords naturally in body copy and subheadings
-- Do not keyword-stuff — write for humans first
+### Chiến lược từ khóa
+- Xác định một từ khóa chính và 2-3 từ khóa phụ mỗi nội dung
+- Từ khóa chính xuất hiện ở: headline, đoạn đầu tiên, một tiêu đề phụ, meta description, URL slug
+- Từ khóa phụ dùng tự nhiên trong thân và tiêu đề phụ
+- Không nhồi nhét từ khóa — viết cho con người trước
 
-### On-Page SEO Checklist
-- Title tag: under 60 characters, includes primary keyword
-- Meta description: under 160 characters, includes primary keyword, compels click
-- URL slug: short, descriptive, includes primary keyword
-- H1: one per page, matches or closely reflects the title tag
-- H2/H3: descriptive, include secondary keywords where natural
-- Image alt text: descriptive, includes keyword where relevant
-- Internal links: 2-3 links to related content on your site
-- External links: 1-2 links to authoritative sources
+### Checklist SEO on-page
+- Title tag: dưới 60 ký tự, chứa từ khóa chính
+- Meta description: dưới 160 ký tự, chứa từ khóa chính, thôi thúc click
+- URL slug: ngắn, rõ nghĩa, chứa từ khóa chính
+- H1: một mỗi trang, khớp hoặc gần khớp với title tag
+- H2/H3: mô tả rõ, chứa từ khóa phụ ở nơi tự nhiên
+- Alt text hình ảnh: mô tả rõ, chứa từ khóa ở nơi phù hợp
+- Internal link: 2-3 link tới nội dung liên quan trên website
+- External link: 1-2 link tới nguồn có thẩm quyền
 
-### Content-SEO Integration
-- Aim for comprehensive coverage of the topic (search engines reward depth)
-- Answer related questions (check "People Also Ask" for ideas)
-- Update and refresh high-performing content regularly
-- Structure content for featured snippets: definition paragraphs, numbered lists, tables
+### Tích hợp content-SEO
+- Nhằm bao phủ toàn diện chủ đề (engine tìm kiếm thưởng độ sâu)
+- Trả lời câu hỏi liên quan (xem "People Also Ask" để lấy ý tưởng)
+- Cập nhật và làm mới nội dung hiệu quả cao thường xuyên
+- Cấu trúc nội dung cho featured snippet: đoạn định nghĩa, danh sách số, bảng
 
-## Headline and Hook Formulas
+## Công thức headline và hook
 
-### Headline Formulas
-- **How to [achieve result] [without common obstacle]** — "How to Double Your Email Open Rates Without Sending More Emails"
-- **[Number] [adjective] ways to [achieve result]** — "7 Proven Ways to Reduce Customer Churn"
-- **Why [common belief] is wrong (and what to do instead)** — "Why More Content Is Not the Answer (And What to Do Instead)"
-- **The [adjective] guide to [topic]** — "The Complete Guide to B2B Content Marketing"
-- **[Do this], not [that]** — "Build a Community, Not Just an Audience"
-- **What [impressive result] taught us about [topic]** — "What 10,000 A/B Tests Taught Us About Email Subject Lines"
-- **[topic]: what [audience] needs to know in [year]** — "SEO: What Marketers Need to Know in 2025"
+### Công thức headline
+- **Cách [đạt kết quả] mà không [rào cản phổ biến]** — "Cách tăng 200% leads mà không tăng ngân sách quảng cáo"
+- **[Số] cách [đạt kết quả]** — "7 Cách Giảm Tỷ Lệ Học Sinh Rời Lớp Toán"
+- **Vì sao [niềm tin phổ biến] là sai (và nên làm gì thay vào)** — "Vì sao học thuộc công thức là sai (và nên làm gì thay vào)"
+- **Hướng dẫn [tính từ] về [chủ đề]** — "Hướng dẫn đầy đủ về Luyện Thi Toán"
+- **[Làm cái này], không phải [cái kia]** — "Xây thói quen học, không chỉ xây kiến thức"
+- **[Chủ đề]: điều [đối tượng] cần biết trong [năm]** — "SEO: Điều Marketer Cần Biết Năm 2026"
 
-### Hook Formulas (Opening Lines)
-- **Surprising statistic**: "73% of marketers say their biggest challenge is not budget — it is focus."
-- **Contrarian statement**: "The best marketing campaigns start with saying no to most channels."
-- **Question**: "When was the last time a marketing email actually changed what you bought?"
-- **Scenario**: "Imagine launching a campaign and knowing, before it goes live, which messages will land."
-- **Bold claim**: "Most landing pages lose half their visitors in the first three seconds."
-- **Story opening**: "Last quarter, our team was spending 20 hours a week on reporting. Here is what we did about it."
+### Công thức hook (câu mở đầu)
+- **Thống kê gây ngạc nhiên**: "73% marketer nói thách thức lớn nhất không phải ngân sách — mà là sự tập trung."
+- **Phát biểu trái chiều**: "Chiến dịch marketing tốt nhất bắt đầu bằng việc nói không với hầu hết các kênh."
+- **Câu hỏi**: "Lần cuối cùng một email marketing khiến bạn thực sự mua một thứ là khi nào?"
+- **Kịch bản**: "Hãy tưởng tượng ra mắt chiến dịch mà biết trước, trước khi live, thông điệp nào sẽ chạm tới người dùng."
+- **Tuyên bố táo bạo**: "Hầu hết landing page mất một nửa khách truy cập trong 3 giây đầu tiên."
+- **Mở đầu bằng câu chuyện**: "Quý trước, team chúng tôi tốn 20 giờ mỗi tuần chỉ để làm báo cáo. Đây là cách chúng tôi giải quyết."
 
-## Call-to-Action Best Practices
+## Call to action tốt nhất
 
-### CTA Principles
-- Use action verbs: "Get", "Start", "Download", "Join", "Try", "See"
-- Be specific about what happens next: "Start your free trial" is better than "Submit"
-- Create urgency when genuine: "Join 500 teams already using this" or "Limited spots available"
-- Reduce risk: "No credit card required", "Cancel anytime", "Free for 14 days"
-- One primary CTA per page or email — too many choices reduce conversions
+### Nguyên tắc CTA
+- Dùng động từ hành động: "Nhận", "Bắt đầu", "Tải xuống", "Tham gia", "Dùng thử", "Xem"
+- Cụ thể về việc sẽ xảy ra tiếp theo: "Bắt đầu dùng thử miễn phí" tốt hơn "Gửi"
+- Tạo sự khẩn khi thực sự có: "Tham gia 500 team đang dùng" hoặc "Còn ít chỗ"
+- Giảm rủi ro: "Không cần thẻ tín dụng", "Hủy bất kỳ lúc nào", "Miễn phí 14 ngày"
+- Một CTA chính mỗi trang hoặc email — quá nhiều lựa chọn giảm chuyển đổi
 
-### CTA Examples by Context
-- **Blog post**: "Read our complete guide to [topic]" / "Subscribe for weekly insights"
-- **Landing page**: "Start free trial" / "Get a demo" / "See pricing"
-- **Email**: "Read the full story" / "Claim your spot" / "Reply and tell us"
-- **Social media**: "Drop a comment if you agree" / "Save this for later" / "Link in bio"
-- **Case study**: "See how [product] can work for your team" / "Talk to our team"
+### Ví dụ CTA theo bối cảnh
+- **Blog post**: "Đọc hướng dẫn đầy đủ về [chủ đề]" / "Đăng ký nhận insight mỗi tuần"
+- **Landing page**: "Bắt đầu dùng thử miễn phí" / "Đặt demo" / "Xem bảng giá"
+- **Email**: "Đọc câu chuyện đầy đủ" / "Giữ chỗ của bạn" / "Reply và cho chúng tôi biết"
+- **Social media**: "Comment nếu bạn đồng ý" / "Lưu lại để xem sau" / "Link trong bio"
+- **Case study**: "Xem [sản phẩm] hoạt động thế nào với team bạn" / "Nói chuyện với đội ngũ của chúng tôi"
 
-### CTA Placement
-- Above the fold on landing pages (do not make users scroll to act)
-- After establishing value in emails (not in the first sentence)
-- At the end of blog posts (after you have earned the reader's trust)
-- In-line within content when contextually relevant (e.g., a related guide mention)
-- Repeat the primary CTA at the bottom of long-form pages
+### Vị trí đặt CTA
+- Trênfold trên landing page (đừng bắt người dùng cuộn mới hành động)
+- Sau khi đã tạo giá trị trong email (không phải câu đầu tiên)
+- Cuối blog post (sau khi đã tạo lòng tin với độc giả)
+- Trong nội dung khi theo ngữ cảnh phù hợp (nhắc tới hướng dẫn liên quan)
+- Lặp lại CTA chính ở cuối trang dài

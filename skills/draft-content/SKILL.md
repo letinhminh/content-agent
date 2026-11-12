@@ -1,117 +1,116 @@
 ---
 name: draft-content
-description: Draft blog posts, social media, email newsletters, landing pages, press releases, and case studies with channel-specific formatting and SEO recommendations. Use when writing any marketing content, when you need headline or subject line options, or when adapting a message for a specific platform, audience, and brand voice.
-argument-hint: "<content type and topic>"
+description: "Soạn thảo blog post, social media, email newsletter, landing page, thông cáo báo chí, case study với định dạng theo từng kênh và gợi ý SEO. Dùng khi viết bất kỳ nội dung marketing nào, khi cần lựa chọn headline hoặc subject line, hoặc khi chuyển thể thông điệp cho kênh, đối tượng, brand voice cụ thể."
+argument-hint: "<loại nội dung và chủ đề>"
 ---
 
-# Draft Content
+# Soạn thảo nội dung (Draft Content)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+Tạo bản nháp nội dung marketing phù hợp với loại nội dung, đối tượng và brand voice cụ thể.
 
-Generate marketing content drafts tailored to a specific content type, audience, and brand voice.
+## Kích hoạt
 
-## Trigger
+Người dùng chạy `/draft-content` hoặc yêu cầu soạn thảo, viết, tạo nội dung marketing.
 
-User runs `/draft-content` or asks to draft, write, or create marketing content.
+## Đầu vào
 
-## Inputs
+Thu thập các thông tin sau từ người dùng. Nếu chưa có, hỏi trước khi bắt đầu:
 
-Gather the following from the user. If not provided, ask before proceeding:
-
-1. **Content type** — one of:
+1. **Loại nội dung** — một trong các loại sau:
    - Blog post
-   - Social media post (specify platform: LinkedIn, Twitter/X, Instagram, Facebook)
+   - Bài đăng mạng xã hội (ghi rõ nền tảng: LinkedIn, X/Twitter, Instagram, Facebook, TikTok)
    - Email newsletter
-   - Landing page copy
-   - Press release
+   - Copy landing page
+   - Thông cáo báo chí
    - Case study
 
-2. **Topic** — the subject or theme of the content
+2. **Chủ đề** — chủ đề hoặc góc tiếp cận của nội dung
 
-3. **Target audience** — who this content is for (role, industry, seniority, pain points)
+3. **Đối tượng mục tiêu** — nội dung dành cho ai (chức danh, ngành, cấp bậc, nỗi đau)
 
-4. **Key messages** — 2-4 main points or takeaways to communicate
+4. **Thông điệp chính** — 2-4 điểm chính cần truyền đạt
 
-5. **Tone** — e.g., authoritative, conversational, inspirational, technical, witty (optional if brand voice is configured)
+5. **Tone** — ví dụ: có thẩm quyền, gần gũi, truyền cảm hứng, kỹ thuật, hóm hỉnh (bỏ trống nếu đã có brand voice)
 
-6. **Length** — target word count or format constraint (e.g., "1000 words", "280 characters", "3 paragraphs")
+6. **Độ dài** — số từ mục tiêu hoặc giới hạn định dạng (ví dụ: "1000 từ", "280 ký tự", "3 đoạn văn")
 
-## Brand Voice
+## Brand voice
 
-- If the user has a brand voice configured in their local settings file, apply it automatically. Inform the user that brand voice settings are being applied.
-- If no brand voice is configured, ask: "Do you have brand voice guidelines you'd like me to follow? If not, I'll use a neutral professional tone."
-- Apply the specified or default tone consistently throughout the draft.
+- Nếu người dùng đã cấu hình brand voice trong file cài đặt local, áp dụng tự động và thông báo cho người dùng.
+- Nếu chưa cấu hình, hỏi: "Bạn có brand voice guidelines muốn tôi theo không? Nếu không, tôi sẽ dùng tone chuyên nghiệp trung tính."
+- Áp dụng nhất quán tone đã chọn trong toàn bộ bản nháp.
 
-## Content Generation by Type
+## Tạo nội dung theo loại
 
-### Blog Post
-- Engaging headline (provide 2-3 options)
-- Introduction with a hook (question, statistic, bold statement, or story)
-- 3-5 organized sections with descriptive subheadings
-- Supporting points, examples, or data references in each section
-- Conclusion with a clear call to action
-- SEO considerations: suggest a primary keyword, include it in the headline and first paragraph, use related keywords in subheadings
+### Blog post
+- Headline hấp dẫn (đưa 2-3 lựa chọn)
+- Mở bài có hook (câu hỏi, thống kê, phát biểu táo bạo hoặc câu chuyện)
+- 3-5 mục có tiêu đề phụ mô tả rõ ràng
+- Điểm hỗ trợ, ví dụ hoặc dữ liệu trong mỗi mục
+- Kết bài kèm call to action rõ ràng
+- Gợi ý SEO: từ khóa chính, đưa vào headline và đoạn đầu tiên, từ khóa liên quan trong tiêu đề phụ
 
-### Social Media Post
-- Platform-appropriate format and length
-- Hook in the first line
-- Hashtag suggestions (3-5 relevant hashtags)
-- Call to action or engagement prompt
-- Emoji usage appropriate to brand and platform
-- If LinkedIn: professional framing, paragraph breaks for readability
-- If Twitter/X: concise, punchy, within character limit
-- If Instagram: visual-first language, story-driven, hashtag block
+### Bài đăng mạng xã hội
+- Định dạng và độ dài phù hợp từng nền tảng
+- Hook ngay dòng đầu tiên
+- Gợi ý hashtag (3-5 hashtag phù hợp)
+- Call to action hoặc gợi ý tương tác
+- Emoji phù hợp với brand và nền tảng
+- LinkedIn: giọng điệu chuyên nghiệp, ngắt dòng cho dễ đọc
+- X/Twitter: ngắn gọn, súc tích, trong giới hạn ký tự
+- Instagram: ngôn ngữ hình ảnh, kể chuyện, khối hashtag
+- TikTok: kịch bản nói 30-45 giây, hook 3 giây đầu
 
-### Email Newsletter
-- Subject line (provide 2-3 options with open-rate considerations)
+### Email newsletter
+- Subject line (đưa 2-3 lựa chọn, cân nhắc tỷ lệ mở)
 - Preview text
-- Greeting
-- Body sections with clear hierarchy
-- Call to action button text
-- Sign-off
-- Unsubscribe note reminder
+- Lời chào
+- Các mục thân có thứ bậc rõ ràng
+- Nút call to action
+- Lời ký
+- Nhắc nhở link hủy đăng ký
 
-### Landing Page Copy
-- Headline and subheadline
-- Hero section copy
-- Value propositions (3-4 benefit-driven bullets or sections)
-- Social proof placeholder (suggest testimonial or stat placement)
-- Primary and secondary CTAs
-- FAQ section suggestions
-- SEO: meta title and meta description suggestions
+### Copy landing page
+- Headline và subheadline
+- Copy hero section
+- 3-4 giá trị nổi bật dạng bullet hoặc mục
+- Chỗ dành cho social proof (gợi ý vị trí testimonial hoặc thống kê)
+- Call to action chính và phụ
+- Gợi ý mục FAQ
+- SEO: gợi ý meta title và meta description
 
-### Press Release
-- Headline following press release conventions
-- Dateline and location
-- Lead paragraph (who, what, when, where, why)
-- Supporting quotes (provide placeholder guidance)
-- Company boilerplate placeholder
-- Media contact placeholder
-- Standard press release formatting
+### Thông cáo báo chí
+- Headline theo chuẩn thông cáo báo chí
+- Dateline và địa điểm
+- Đoạn lead (ai, cái gì, khi nào, ở đâu, tại sao)
+- Quote hỗ trợ (hướng dẫn viết placeholder)
+- Boilerplate công ty (placeholder)
+- Liên hệ báo chí (placeholder)
+- Định dạng thông cáo báo chí chuẩn
 
-### Case Study
-- Title emphasizing the result
-- Customer overview (industry, size, challenge)
-- Challenge section
-- Solution section (what was implemented)
-- Results section with metrics (prompt user for data)
-- Customer quote placeholder
+### Case study
+- Tiêu đề nhấn vào kết quả
+- Tổng quan khách hàng (ngành, quy mô, thách thức)
+- Mục thách thức
+- Mục giải pháp (đã triển khai cái gì)
+- Mục kết quả kèm số liệu (hỏi người dùng để lấy dữ liệu)
+- Placeholder quote khách hàng
 - Call to action
 
-## SEO Considerations (for web content)
+## Gợi ý SEO (cho nội dung web)
 
-For blog posts, landing pages, and other web-facing content:
-- Suggest a primary keyword based on the topic
-- Recommend keyword placement: headline, first paragraph, subheadings, meta description
-- Suggest internal and external linking opportunities
-- Recommend a meta description (under 160 characters)
-- Note image alt text opportunities
+Với blog post, landing page và các nội dung hướng web khác:
+- Gợi ý từ khóa chính dựa trên chủ đề
+- Gợi ý vị trí đặt từ khóa: headline, đoạn đầu tiên, tiêu đề phụ, meta description
+- Gợi ý cơ hội liên kết nội bộ và bên ngoài
+- Đề xuất meta description (dưới 160 ký tự)
+- Ghi chú cơ hội alt text cho hình ảnh
 
-## Output
+## Đầu ra
 
-Present the draft with clear formatting. After the draft, include:
-- A brief note on what brand voice and tone were applied
-- Any SEO recommendations (for web content)
-- Suggestions for next steps (e.g., "Review with your team", "Add customer quotes", "Pair with a visual")
+Trình bày bản nháp với định dạng rõ ràng. Sau bản nháp, kèm thêm:
+- Ghi chú ngắn về brand voice và tone đã áp dụng
+- Gợi ý SEO (với nội dung web)
+- Gợi ý bước tiếp theo (ví dụ: "Review cùng team", "Thêm quote khách hàng", "Ghép với hình ảnh")
 
-Ask: "Would you like me to revise any section, adjust the tone, or create a variation for a different channel?"
+Kết thúc bằng câu hỏi: "Bạn muốn tôi chỉnh sửa mục nào, thay đổi tone, hoặc tạo biến thể cho kênh khác không?"

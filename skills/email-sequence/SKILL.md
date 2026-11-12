@@ -1,220 +1,218 @@
 ---
 name: email-sequence
-description: Design and draft multi-email sequences with full copy, timing, branching logic, exit conditions, and performance benchmarks. Use when building onboarding, lead nurture, re-engagement, win-back, or product launch flows, when you need a complete drip campaign with A/B test suggestions, or when mapping a sequence end-to-end with a flow diagram.
-argument-hint: "[sequence type]"
+description: "Thiết kế và soạn thảo chuỗi email nhiều bước với copy đầy đủ, timing, branching logic, điều kiện thoát và benchmark hiệu quả. Dùng khi xây dựng onboarding, lead nurture, re-engagement, win-back hoặc luồng ra mắt sản phẩm, khi cần drip campaign hoàn chỉnh kèm gợi ý A/B test, hoặc khi vẽ chuỗi end-to-end kèm sơ đồ flow."
+argument-hint: "[loại chuỗi]"
 ---
 
-# Email Sequence
+# Chuỗi Email (Email Sequence)
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+Thiết kế và soạn thảo chuỗi email hoàn chỉnh với copy đầy đủ, timing, branching logic và benchmark hiệu quả cho bất kỳ use case vòng đời hoặc chiến dịch nào.
 
-Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks for any lifecycle or campaign use case.
+## Kích hoạt
 
-## Trigger
+Người dùng chạy `/email-sequence` hoặc yêu cầu tạo, thiết kế, xây dựng hoặc soạn thảo chuỗi email, drip campaign, nurture flow hoặc chuỗi onboarding.
 
-User runs `/email-sequence` or asks to create, design, build, or draft an email sequence, drip campaign, nurture flow, or onboarding series.
+## Đầu vào
 
-## Inputs
+Thu thập các thông tin sau từ người dùng. Nếu chưa có, hỏi trước khi bắt đầu:
 
-Gather the following from the user. If not provided, ask before proceeding:
-
-1. **Sequence type** — one of:
+1. **Loại chuỗi** — một trong các loại sau:
    - Onboarding
    - Lead nurture
    - Re-engagement
-   - Product launch
+   - Ra mắt sản phẩm
    - Event follow-up
    - Upgrade/upsell
    - Win-back
    - Educational drip
 
-2. **Goal** — what the sequence should achieve (e.g., activate new users, convert leads to customers, reduce churn, drive event attendance, upsell to a higher tier)
+2. **Mục tiêu** — chuỗi này cần đạt điều gì (ví dụ: kích hoạt người dùng mới, chuyển leads thành khách hàng, giảm churn, tăng tham dự sự kiện, upsell lên gói cao hơn)
 
-3. **Audience** — who receives this sequence, what stage they are at, and any relevant segmentation details (role, industry, behavior triggers, lifecycle stage)
+3. **Đối tượng** — ai nhận chuỗi này, họ đang ở giai đoạn nào, và thông tin phân khúc liên quan (chức danh, ngành, trigger hành vi, vòng đời)
 
-4. **Number of emails** (optional) — if not specified, recommend a count based on the sequence type using the templates in the Sequence Type Templates section below
+4. **Số lượng email** (không bắt buộc) — nếu không ghi, đề xuất số lượng theo loại chuỗi trong phần Template loại chuỗi bên dưới
 
-5. **Timing/cadence preferences** (optional) — desired spacing between emails (e.g., "every 3 days", "weekly", "aggressive first week then taper off")
+5. **Ưu tiên timing/tần suất** (không bắt buộc) — khoảng cách mong muốn giữa các email (ví dụ: "mỗi 3 ngày", "hàng tuần", "dồn đầu tuần rồi giảm dần")
 
-6. **Brand voice** — if configured in local settings, apply automatically and inform the user. If not configured, ask: "Do you have brand voice guidelines I should follow? If not, I'll use a clear, conversational professional tone."
+6. **Brand voice** — nếu đã cấu hình trong cài đặt local, áp dụng tự động và thông báo cho người dùng. Nếu chưa cấu hình, hỏi: "Bạn có brand voice guidelines muốn tôi theo không? Nếu không, tôi sẽ dùng tone chuyên nghiệp, gần gũi."
 
-7. **Additional context** (optional):
-   - Specific offers, discounts, or incentives to include
-   - CTAs or landing pages to link to
-   - Content assets available (blog posts, case studies, videos, guides)
-   - Product features to highlight
-   - Competitor differentiators to reference
+7. **Bối cảnh bổ sung** (không bắt buộc):
+   - Offer, ưu đãi hoặc khuyến khích cụ thể cần đưa vào
+   - CTA hoặc landing page cần link tới
+   - Asset nội dung có sẵn (blog post, case study, video, hướng dẫn)
+   - Tính năng sản phẩm cần nhấn mạnh
+   - Điểm khác biệt với đối thủ cần tham chiếu
 
-## Process
+## Quy trình
 
-### 1. Sequence Strategy
+### 1. Chiến lược chuỗi
 
-Before drafting any emails, define the overall sequence architecture:
+Trước khi soạn thảo bất kỳ email nào, định nghĩa kiến trúc tổng thể của chuỗi:
 
-- **Narrative arc** — what story does this sequence tell across all emails? What is the emotional and logical progression from first email to last?
-- **Journey mapping** — map each email to a stage of the buyer or user journey (awareness, consideration, decision, activation, expansion)
-- **Escalation logic** — how does the intensity, urgency, or value of each email build on the previous one?
-- **Success definition** — what specific action signals that the sequence has done its job and the recipient should exit?
+- **Narrative arc** — chuỗi này kể câu chuyện gì xuyên suốt các email? Tiến triển cảm xúc và logic từ email đầu đến cuối là gì?
+- **Ánh xạ hành trình** — mỗi email tương ứng với giai đoạn nào của hành trình người mua/người dùng (awareness, consideration, decision, activation, expansion)?
+- **Logic leo thang** — cường độ, mức khẩn hoặc giá trị của mỗi email tăng dần thế nào?
+- **Định nghĩa thành công** — hành động cụ thể nào báo hiệu chuỗi đã hoàn thành nhiệm vụ và người nhận nên thoát khỏi chuỗi?
 
-### 2. Individual Email Design
+### 2. Thiết kế từng email
 
-For each email in the sequence, produce:
+Với mỗi email trong chuỗi, tạo:
 
-#### Subject Line
-- Provide 2-3 options per email
-- Vary approaches: curiosity, benefit-driven, urgency, personalization, question-based
-- Keep under 50 characters where possible; note preview behavior on mobile
+#### Subject line
+- Đưa 2-3 lựa chọn mỗi email
+- Đa dạng cách tiếp cận: tò mò, nhấn lợi ích, khẩn cấp, cá nhân hóa, dạng câu hỏi
+- Giữ dưới 50 ký tự khi có thể; ghi chú hành vi preview trên mobile
 
-#### Preview Text
-- 40-90 characters that complement (not repeat) the subject line
-- Should add context or intrigue that increases open likelihood
+#### Preview text
+- 40-90 ký tự bổ sung (không lặp lại) cho subject line
+- Thêm bối cảnh hoặc gợi tò mò để tăng khả năng mở
 
-#### Email Purpose
-- One sentence explaining why this email exists and what it moves the recipient toward
+#### Mục đích email
+- Một câu giải thích vì sao email này tồn tại và nó thúc đẩy người nhận tới đâu
 
-#### Body Copy
-- Full draft ready to use
-- Clear hierarchy: hook, body, CTA
-- Short paragraphs (2-3 sentences max)
-- Scannable formatting with bold key phrases where appropriate
-- Personalization tokens where relevant (e.g., first name, company name, product used)
+#### Body copy
+- Bản nháp đầy đủ sẵn sàng dùng
+- Thứ bậc rõ ràng: hook, thân, CTA
+- Đoạn ngắn (tối đa 2-3 câu)
+- Định dạng dễ quét với cụm từ chính in đậm ở nơi phù hợp
+- Token cá nhân hóa ở nơi liên quan (ví dụ: tên, công ty, sản phẩm đã dùng)
 
-#### Primary CTA
-- Button text and destination
-- One primary CTA per email (secondary CTA only if appropriate for the sequence stage)
+#### CTA chính
+- Text nút và đích đến
+- Một CTA chính mỗi email (CTA phụ chỉ khi phù hợp với giai đoạn của chuỗi)
 
 #### Timing
-- Days after the trigger event or after the previous email
-- Note if timing should adjust based on engagement (e.g., "send sooner if they opened but did not click")
+- Số ngày sau trigger event hoặc sau email trước
+- Ghi chú nếu timing cần điều chỉnh theo tương tác (ví dụ: "gửi sớm hơn nếu đã mở nhưng chưa click")
 
-#### Segment/Condition Notes
-- Who receives this email vs. who skips it
-- Any behavioral or attribute-based conditions (e.g., "only send to users who have not completed setup")
+#### Ghi chú phân khúc/điều kiện
+- Ai nhận email này và ai bỏ qua
+- Điều kiện hành vi hoặc thuộc tính (ví dụ: "chỉ gửi cho người dùng chưa hoàn thành thiết lập")
 
-### 3. Sequence Logic
+### 3. Logic chuỗi
 
-Define the flow control for the sequence:
+Định nghĩa điều khiển luồng của chuỗi:
 
-- **Branching conditions** — alternate paths based on engagement. For example:
-  - "If opened email 2 but did not click CTA, send email 2b (softer re-ask) instead of email 3"
-  - "If clicked CTA in email 1, skip email 2 and go directly to email 3"
-- **Exit conditions** — when a recipient converts (completes the desired action), remove them from the sequence. Define what "conversion" means for this sequence.
-- **Re-entry rules** — can someone re-enter the sequence? Under what conditions? (e.g., "if a user churns again 90 days later, re-enter the win-back sequence")
-- **Suppression rules** — do not send if the recipient is already in another active sequence, has unsubscribed from marketing, or has contacted support in the last 48 hours
+- **Điều kiện rẽ nhánh** — đường đi thay thế theo tương tác. Ví dụ:
+  - "Nếu đã mở email 2 nhưng chưa click CTA, gửi email 2b (nhắc nhẹ hơn) thay vì email 3"
+  - "Nếu đã click CTA trong email 1, bỏ email 2 và đi thẳng tới email 3"
+- **Điều kiện thoát** — khi người nhận chuyển đổi (hoàn thành hành động mong muốn), loại họ khỏi chuỗi. Định nghĩa "chuyển đổi" là gì với chuỗi này.
+- **Quy tắc vào lại** — ai có thể vào lại chuỗi? Trong điều kiện nào? (ví dụ: "nếu người dùng churn lại sau 90 ngày, vào lại chuỗi win-back")
+- **Quy tắc chặn gửi (suppression)** — không gửi nếu người nhận đang trong chuỗi active khác, đã hủy đăng ký marketing, hoặc đã liên hệ support trong 48 giờ qua
 
-### 4. Performance Benchmarks
+### 4. Benchmark hiệu quả
 
-Provide expected benchmarks based on the sequence type so the user can set targets:
+Đưa benchmark kỳ vọng theo loại chuỗi để người dùng đặt mục tiêu:
 
-| Metric | Onboarding | Lead Nurture | Re-engagement | Win-back |
+| Chỉ số | Onboarding | Lead Nurture | Re-engagement | Win-back |
 |--------|-----------|--------------|---------------|----------|
 | Open rate | 50-70% | 20-30% | 15-25% | 15-20% |
 | Click-through rate | 10-20% | 3-7% | 2-5% | 2-4% |
-| Conversion rate | 15-30% | 2-5% | 3-8% | 1-3% |
-| Unsubscribe rate | <0.5% | <0.5% | 1-2% | 1-3% |
+| Tỷ lệ chuyển đổi | 15-30% | 2-5% | 3-8% | 1-3% |
+| Tỷ lệ hủy đăng ký | <0.5% | <0.5% | 1-2% | 1-3% |
 
-Adjust benchmarks based on industry and audience if the user has provided that context.
+Điều chỉnh benchmark theo ngành và đối tượng nếu người dùng đã cung cấp bối cảnh.
 
-## Sequence Type Templates
+## Template theo loại chuỗi
 
-Use these as starting frameworks. Adapt length and content based on the user's goal and audience.
+Dùng các template này làm framework bắt đầu. Điều chỉnh độ dài và nội dung theo mục tiêu và đối tượng của người dùng.
 
-**Onboarding (5-7 emails over 14-21 days):**
-Welcome and set expectations -- Quick win to demonstrate value -- Core feature deep dive -- Advanced feature or integration -- Social proof and community -- Check-in and feedback request -- Upgrade prompt or next steps
+**Onboarding (5-7 email trong 14-21 ngày):**
+Chào mừng và đặt kỳ vọng -- Thắng nhanh để thấy giá trị -- Giới thiệu kỹ tính năng cốt lõi -- Tính năng nâng cao hoặc tích hợp -- Social proof và cộng đồng -- Hỏi thăm và xin feedback -- Nhắc nâng cấp hoặc bước tiếp theo
 
-**Lead Nurture (4-6 emails over 3-4 weeks):**
-Value-first educational content -- Pain point identification -- Solution positioning with proof -- Social proof and results -- Soft CTA (trial, demo, resource) -- Direct CTA (buy, book, sign up)
+**Lead Nurture (4-6 email trong 3-4 tuần):**
+Nội dung giáo dục đặt giá trị lên đầu -- Xác định nỗi đau -- Định vị giải pháp kèm bằng chứng -- Social proof và kết quả -- CTA nhẹ (dùng thử, demo, tài nguyên) -- CTA trực tiếp (mua, đặt lịch, đăng ký)
 
-**Re-engagement (3-4 emails over 10-14 days):**
-"We miss you" with a compelling reason to return -- Value reminder highlighting what they are missing -- Incentive or exclusive offer -- Last chance with clear deadline
+**Re-engagement (3-4 email trong 10-14 ngày):**
+"Nhớ bạn" kèm lý do hấp dẫn để quay lại -- Nhắc giá trị họ đang bỏ lỡ -- Ưu đãi hoặc offer độc quyền -- Cơ hội cuối với deadline rõ ràng
 
-**Win-back (3-5 emails over 30 days):**
-Friendly check-in asking what went wrong -- What is new since they left -- Special offer or incentive to return -- Feedback request (even if they do not come back) -- Final goodbye with door open
+**Win-back (3-5 email trong 30 ngày):**
+Hỏi thăm thân thiện xem điều gì đã sai -- Có gì mới kể từ khi họ rời đi -- Offer đặc biệt hoặc khuyến khích quay lại -- Xin feedback (kể cả nếu họ không quay lại) -- Lời tạm biệt cuối với cánh cửa vẫn mở
 
-**Product Launch (4-6 emails over 2-3 weeks):**
-Teaser or pre-announcement -- Launch announcement with full details -- Feature spotlight or use case -- Social proof and early results -- Limited-time offer or bonus -- Last chance or reminder
+**Ra mắt sản phẩm (4-6 email trong 2-3 tuần):**
+Teaser hoặc thông báo trước -- Thông báo ra mắt kèm chi tiết đầy đủ -- Spotlight tính năng hoặc use case -- Social proof và kết quả ban đầu -- Offer giới hạn thời gian hoặc bonus -- Cơ hội cuối hoặc nhắc nhở
 
-**Event Follow-up (3-4 emails over 7-10 days):**
-Thank you with key takeaways or recordings -- Resource roundup from the event -- Related offer or next step -- Feedback survey
+**Event follow-up (3-4 email trong 7-10 ngày):**
+Cảm ơn kèm điểm chính hoặc bản ghi -- Tổng hợp tài nguyên từ sự kiện -- Offer liên quan hoặc bước tiếp theo -- Khảo sát feedback
 
-**Upgrade/Upsell (3-5 emails over 2-3 weeks):**
-Usage milestone or success celebration -- Feature gap or limitation they are hitting -- Upgrade benefits with proof -- Limited-time incentive -- Direct comparison of plans
+**Upgrade/Upsell (3-5 email trong 2-3 tuần):**
+Ăn mừng cột mốc sử dụng hoặc thành công -- Khoảng trống tính năng hoặc giới hạn họ đang chạm tới -- Lợi ích nâng cấp kèm bằng chứng -- Ưu đãi giới hạn thời gian -- So sánh trực tiếp các gói
 
-**Educational Drip (5-8 emails over 4-6 weeks):**
-Introduction and what they will learn -- Lesson 1: foundational concept -- Lesson 2: intermediate concept -- Lesson 3: advanced concept -- Practical application or exercise -- Resource roundup -- Graduation and next steps
+**Educational drip (5-8 email trong 4-6 tuần):**
+Giới thiệu và điều họ sẽ học -- Bài 1: khái niệm nền tảng -- Bài 2: khái niệm trung cấp -- Bài 3: khái niệm nâng cao -- Ứng dụng thực hành hoặc bài tập -- Tổng hợp tài nguyên -- Tốt nghiệp và bước tiếp theo
 
-## Tool Integration
+## Tích hợp công cụ
 
-### If ~~email marketing is connected (e.g., Klaviyo, Mailchimp, Customer.io)
-- Reference how to set up the sequence as a flow or automation in the platform
-- Note any platform-specific features to use (e.g., smart send time, conditional splits, A/B testing)
-- Map the branching logic to the platform's visual flow builder concepts
+### Nếu đã kết nối email marketing (ví dụ: Klaviyo, Mailchimp, Customer.io)
+- Tham chiếu cách thiết lập chuỗi dạng flow hoặc automation trên nền tảng
+- Ghi chú tính năng đặc thù cần dùng (ví dụ: smart send time, conditional splits, A/B testing)
+- Ánh xạ logic rẽ nhánh theo khái niệm flow builder trực quan của nền tảng
 
-### If ~~marketing automation or ~~CRM is connected (e.g., HubSpot, Marketo)
-- Reference lead scoring data to inform segmentation and exit conditions
-- Use lifecycle stage data to tailor messaging per segment
-- Note how to set enrollment triggers based on CRM properties or list membership
+### Nếu đã kết nối marketing automation hoặc CRM (ví dụ: HubSpot, Marketo)
+- Tham chiếu dữ liệu lead scoring để định hình phân khúc và điều kiện thoát
+- Dùng dữ liệu vòng đời (lifecycle stage) để điều chỉnh thông điệp theo từng phân khúc
+- Ghi chú cách thiết lập enrollment trigger dựa trên thuộc tính CRM hoặc thành viên danh sách
 
-### If no tools are connected
-- Deliver all email content in copy-paste-ready format
-- Include a setup checklist the user can follow in any email platform:
-  1. Create the automation or flow
-  2. Set the enrollment trigger
-  3. Add each email with the specified delays
-  4. Configure branching and exit conditions
-  5. Set up tracking for the recommended metrics
+### Nếu chưa kết nối công cụ nào
+- Giao tất cả nội dung email ở dạng sẵn sàng copy-paste
+- Kèm checklist thiết lập mà người dùng có thể làm theo trên bất kỳ nền tảng email nào:
+  1. Tạo automation hoặc flow
+  2. Thiết lập enrollment trigger
+  3. Thêm từng email với độ trễ quy định
+  4. Cấu hình branching và điều kiện thoát
+  5. Thiết lập theo dõi cho các chỉ số được đề xuất
 
-## Output
+## Đầu ra
 
-Present the complete sequence with the following sections:
+Trình bày chuỗi hoàn chỉnh với các mục sau:
 
-### Sequence Overview Table
+### Bảng tổng quan chuỗi
 
-| # | Subject Line | Purpose | Timing | Primary CTA | Condition |
-|---|-------------|---------|--------|-------------|-----------|
+| # | Subject Line | Mục đích | Timing | CTA chính | Điều kiện |
+|---|-------------|----------|--------|----------|-----------|
 
-### Full Email Drafts
-Each email with subject line options, preview text, purpose, body copy, CTA, timing, and segment notes.
+### Bản nháp đầy đủ từng email
+Mỗi email gồm subject line options, preview text, mục đích, body copy, CTA, timing và ghi chú phân khúc.
 
-### Sequence Flow Diagram
-A text-based diagram showing the email flow, branching paths, and exit points. Use a clear format such as:
+### Sơ đồ luồng chuỗi
+Sơ đồ dạng text thể hiện luồng email, đường rẽ nhánh và điểm thoát. Dùng format rõ ràng như:
 
 ```
-[Trigger] --> Email 1 (Day 0)
+[Trigger] --> Email 1 (Ngày 0)
                 |
-          Opened? --Yes--> Email 2 (Day 3)
+          Đã mở? --Có--> Email 2 (Ngày 3)
                 |              |
-                No        Clicked CTA? --Yes--> [EXIT: Converted]
+                Chưa      Đã click CTA? --Có--> [THOÁT: Đã chuyển đổi]
                 |              |
-                v              No
-          Email 1b (Day 2)     |
+                v              Chưa
+          Email 1b (Ngày 2)    |
                 |              v
-                +--------> Email 3 (Day 7)
+                +--------> Email 3 (Ngày 7)
                                |
                                v
-                          Email 4 (Day 10)
+                          Email 4 (Ngày 10)
                                |
-                          [EXIT: Sequence complete]
+                          [THOÁT: Hoàn thành chuỗi]
 ```
 
-### Branching Logic Notes
-Summary of all conditions, exits, and suppressions in a reference list.
+### Ghi chú logic rẽ nhánh
+Tóm tắt tất cả điều kiện, điểm thoát và quy tắc chặn gửi trong danh sách tham khảo.
 
-### A/B Test Suggestions
-- 2-3 recommended A/B tests (subject lines, CTA text, send time, email length)
-- What to test, how to split, and how to measure the winner
+### Gợi ý A/B test
+- 2-3 A/B test đề xuất (subject line, text CTA, thời gian gửi, độ dài email)
+- Cái gì test, cách chia, và cách đo người thắng
 
-### Metrics to Track
-- Primary conversion metric for the sequence
-- Per-email metrics: open rate, CTR, unsubscribe rate
-- Sequence-level metrics: overall conversion rate, time to conversion, drop-off points
-- Recommended review cadence (e.g., "Review performance weekly for the first month, then monthly")
+### Chỉ số cần theo dõi
+- Chỉ số chuyển đổi chính của chuỗi
+- Chỉ số từng email: open rate, CTR, tỷ lệ hủy đăng ký
+- Chỉ số cấp chuỗi: tỷ lệ chuyển đổi tổng, thời gian chuyển đổi, điểm rớt
+- Tần suất review đề xuất (ví dụ: "Review hiệu quả hàng tuần trong tháng đầu, sau đó hàng tháng")
 
-## After the Sequence
+## Sau khi có chuỗi
 
-Ask: "Would you like me to:
-- Revise the copy or tone for any specific email?
-- Add a branching path for a specific scenario?
-- Create a variation of this sequence for a different audience segment?
-- Draft the A/B test variants for the subject lines?
-- Build a companion sequence (e.g., a post-purchase follow-up after this lead nurture converts)?"
+Hỏi: "Bạn muốn tôi:
+- Sửa copy hoặc tone cho email cụ thể nào?
+- Thêm đường rẽ nhánh cho kịch bản cụ thể?
+- Tạo biến thể chuỗi này cho phân khúc đối tượng khác?
+- Soạn thảo các biến thể A/B test cho subject line?
+- Xây một chuỗi đồng hành (ví dụ: follow-up sau mua hàng từ lead nurture này)?"
