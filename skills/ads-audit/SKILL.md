@@ -1,24 +1,22 @@
 ---
-name: "claude-ads"
+name: "ads-audit"
 description: "Audit và tối ưu quảng cáo trả phí đa nền tảng. Audit Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon Ads với hơn 250 kiểm tra có trọng số, chấm điểm 0-100, benchmark ngành và khuyến nghị khả thi. Dùng /ads audit để chạy audit toàn diện."
 ---
 
-# Claude Ads: Audit và Tối ưu Quảng cáo Trả phí
+# Ads Audit: Audit và Tối ưu Quảng cáo Trả phí
 
-## Khung Tư duy 10 Nguyên tắc
-
-Mọi audit, kế hoạch hay đầu ra creative đều vận hành dưới một kỷ luật nhận thức chung. Không phải checklist hay mô hình theo giai đoạn — mà là cổng kiểm tra tư duy (mindset gate).
+## 10 Nguyên tắc
 
 **5 cặp nguyên tắc:** QUAN SÁT × 2 (Bên ngoài + Bên trong) → LẮNG NGHE → TƯ DUY → KẾT NỐI × 2 (Ngang + Hệ thống) → CẢM NHẬN → CHẤP NHẬN → SÁNG TẠO → PHÁT TRIỂN
 
 1. **QUAN SÁT — Đầu vào bên ngoài**: Thu thập dữ liệu trước khi hình thành giả thuyết. Xuất dữ liệu tài khoản (export), SERP, trang đích (landing page).
-2. **QUAN SÁT — Nhận thức nội bộ (metacognition)**: Audit cách bạn đang suy nghĩ. Có bias không? Đang áp dụng heuristic B2B cho thợ sửa ống nước địa phương?
+2. **QUAN SÁT — Nhận thức nội bộ (metacognition)**: Audit cách bạn đang suy nghĩ. Có bias không?
 3. **LẮNG NGHE — Tiếp nhận chủ động**: Đọc brief chiến dịch, hướng dẫn của nền tảng, phản hồi cộng đồng trước khi đưa ra khuyến nghị.
 4. **TƯ DUY — Xử lý phê phán**: Tính unit economics bằng tay. Xây dựng phễu: impression → click → landing → micro-conversion → conversion chính → doanh thu → mua lại.
-5. **KẾT NỐI — Hiểu biết ngang**: So khớp pattern giữa các nền tảng. Ràng buộc ngân sách ở nền tảng này thường đi kèm cơ hội mở rộng ở nền tảng kia.
-6. **KẾT NỐI — Điều phối hệ thống**: Toàn bộ hệ thống tracking + attribution + bidding hoạt động như một hệ thống thống nhất, không phải các silo rời rạc.
-7. **CẢM NHẬN — Trí tuệ cảm xúc**: Đọc giữa dòng brief chiến dịch. "More leads" có thể là "I'm getting fired if pipeline drops" (Tôi sẽ bị sa thải nếu pipeline giảm xuống).
-8. **CHẤP NHẬN — Khiêm nhường trí tuệ**: Nói "Tôi không biết" khi dữ liệu chưa đủ. Không khuyến nghị Smart Bidding nếu không biết conversion volume.
+5. **KẾT NỐI — Hiểu biết chiều ngang**: So khớp pattern giữa các nền tảng. Ràng buộc ngân sách ở nền tảng này thường đi kèm cơ hội mở rộng ở nền tảng kia.
+6. **KẾT NỐI — Điều phối hệ thống**: Toàn bộ hệ thống tracking + attribution + bidding hoạt động như một hệ thống thống nhất, không phải các mảnh rời rạc.
+7. **CẢM NHẬN — Trí tuệ cảm xúc**: Đọc giữa dòng brief chiến dịch. "More leads" có thể là "I'm getting fired if pipeline drops".
+8. **CHẤP NHẬN — Khiêm tốn trí tuệ**: Nói "Tôi không biết" khi dữ liệu chưa đủ. Không khuyến nghị Smart Bidding nếu không biết conversion volume.
 9. **SÁNG TẠO — Đầu ra sáng tạo**: Kết hợp dữ liệu + insight thành deliverable có thể hành động.
 10. **PHÁT TRIỂN — Vòng lặp lặp lại**: Mỗi audit là baseline cho lần audit tiếp theo.
 

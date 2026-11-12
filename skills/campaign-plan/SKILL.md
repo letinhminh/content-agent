@@ -20,7 +20,7 @@ Thu thập các thông tin sau từ người dùng. Nếu chưa có, hỏi trư�
 
 2. **Đối tượng mục tiêu** — chiến dịch hướng tới ai (nhân khẩu học, chức danh, ngành, nỗi đau, giai đoạn mua hàng)
 
-3. **Dòng thời gian** — thời lượng chiến dịch và các mốc cố định (ngày ra mắt, ngày sự kiện, deadline mùa vụ)
+3. **Thời gian** — thời lượng chiến dịch và các mốc cố định (ngày ra mắt, ngày sự kiện, deadline, mùa vụ)
 
 4. **Khoảng ngân sách** — ngân sách gần đúng hoặc mức ngân sách (không bắt buộc; nếu không có, tạo kế hoạch không phụ thuộc ngân sách và ghi chú chỗ cần phân bổ ngân sách)
 
@@ -44,26 +44,27 @@ Tạo brief chiến dịch với các mục sau:
 ### 2. Đối tượng mục tiêu
 - Phân khúc chính mô tả chi tiết
 - Phân khúc phụ (nếu có)
-- Nỗi đau và động lực của đối tượng
+- Pain point và động lực của đối tượng
 - Nơi họ dành thời gian (kênh, cộng đồng, ấn phẩm)
 - Căn chỉnh theo giai đoạn mua hàng (awareness, consideration, decision)
 
 ### 3. Thông điệp chính
 - Thông điệp cốt lõi của chiến dịch (một câu)
-- 3-4 thông điệp hỗ trợ điều chỉnh theo nỗi đau của đối tượng
+- 3-4 thông điệp hỗ trợ điều chỉnh theo pain point của đối tượng
 - Biến thể thông điệp theo từng kênh (nếu cần tone khác nhau)
-- Bằng chứng hoặc điểm chứng minh cho mỗi thông điệp
+- Bằng chứng hoặc điểm chứng minh cho mỗi thông điệp (nếu có claim cần chứng minh)
 
 ### 4. Chiến lược kênh
 Đề xuất kênh dựa trên đối tượng và mục tiêu. Với mỗi kênh, gồm:
 - Vì sao kênh này phù hợp với đối tượng và mục tiêu
+- Mức độ hiệu quả của kênh này nếu có dữ liệu lịch sử
 - Gợi ý định dạng nội dung
-- Mức công sức ước tính (thấp, trung bình, cao)
+- Mức nguồn lực ước tính (thấp, trung bình, cao)
 - Gợi ý phân bổ ngân sách (nếu đã có ngân sách)
 
 Cân nhắc các kênh từ:
 - Owned: blog, email, website, kênh social
-- Earned: PR, hợp tác influencer, guest post, tham gia cộng đồng
+- Earned: PR, hợp tác influencer, SEO, community, social viral
 - Paid: search ads, social ads, display, sponsored content, sự kiện
 
 ### 5. Lịch content
@@ -83,25 +84,25 @@ Liệt kê mọi asset cần cho chiến dịch:
 - Tên asset và loại (blog post, email, social post, ad creative, landing page...)
 - Mô tả ngắn về nội dung cần có
 - Ưu tiên (bắt buộc vs không bắt buộc)
-- Thời gian đề xuất để sáng tạo
+- Thời gian đề xuất để làm xong
 
-### 7. Chỉ số thành công
+### 7. KPI và cách đo lường
 Định nghĩa KPI bám theo mục tiêu chiến dịch:
-- KPI chính kèm con số mục tiêu
+- KPI chính kèm chỉ số mục tiêu + định lượng
 - KPI phụ (3-5 chỉ số)
 - Cách theo dõi từng chỉ số
 - Gợi ý tần suất báo cáo
 
-Nếu đã kết nối product analytics, tham khảo dữ liệu hiệu quả lịch sử để đặt mục tiêu.
+Nếu đã kết nối product analytics, mcp nội bộ, meta-mcp, google-ads-mcp, etc. tham khảo dữ liệu hiệu quả lịch sử để đặt mục tiêu.
 
 ### 8. Phân bổ ngân sách (nếu đã có ngân sách)
 - Phân bổ theo kênh hoặc hoạt động
-- Chi phí sản xuất vs phân phối
-- Gợi ý dự phòng (thường 10-15%)
+- Chi phí sản xuất vs deliver
+- Gợi ý dự phòng (thường 5-10% tùy độ lớn của ngân sách)
 
 ### 9. Rủi ro và giảm thiểu
-- 2-3 rủi ro tiềm ẩn (dòng thời gian, đối tượng không khớp, kênh hiệu quả thấp)
-- Chiến lược giảm thiểu cho mỗi rủi ro
+- 2-3 rủi ro tiềm ẩn (thời gian, đối tượng không khớp, kênh hiệu quả thấp)
+- Kịch bản giảm thiểu cho mỗi rủi ro
 
 ### 10. Bước tiếp theo
 - Hành động ngay để khởi động chiến dịch
@@ -118,14 +119,14 @@ Mọi chiến dịch nên xây trên framework năm phần này:
 Định nghĩa thành công trông như thế nào trước khi lên kế hoạch bất cứ thứ gì khác.
 
 - **Awareness**: tăng nhận diện thương hiệu hoặc sản phẩm (đo bằng reach, impressions, share of voice)
-- **Consideration**: thúc đẩy tương tác và giáo dục (đo bằng tương tác nội dung, đăng ký email, webinar attendance)
+- **Consideration**: thúc đẩy tương tác và educate người dùng (đo bằng tương tác với nội dung, đăng ký email, webinar attendance, user dùng thử)
 - **Conversion**: tạo leads hoặc bán hàng (đo bằng đăng ký, demo, mua hàng, pipeline)
 - **Retention**: giữ khách hàng hiện tại (đo bằng giảm churn, upsell, NPS)
 - **Advocacy**: biến khách hàng thành người lan truyền (đo bằng giới thiệu, đánh giá, UGC)
 
 Mục tiêu tốt là SMART: Cụ thể, Đo lường được, Khả thi, Liên quan, Có hạn thời gian.
 
-Ví dụ: "Tạo 200 marketing qualified leads từ công ty SaaS quy mô vừa tại Bắc Mỹ trong 6 tuần sau khi chiến dịch ra mắt."
+Ví dụ: "Tạo 200 marketing qualified leads từ công ty SaaS quy mô vừa tại Đông Nam Á trong 6 tuần sau khi chiến dịch ra mắt."
 
 #### Đối tượng (Audience)
 Định nghĩa người bạn muốn tiếp cận đủ cụ thể để định hướng thông điệp và quyết định kênh.
@@ -153,7 +154,7 @@ Thứ bậc thông điệp:
 4. Tôi nên làm gì? (call to action)
 
 #### Kênh (Channel)
-Chọn kênh dựa trên nơi đối tượng của bạn có mặt, không phải nơi bạn thoải mái nhất. Xem Hướng dẫn chọn kênh bên dưới.
+Chọn kênh dựa trên nơi đối tượng của bạn có mặt nhiều nhất, không phải nơi bạn dễ triển khai nhất. Xem Hướng dẫn chọn kênh bên dưới.
 
 #### Đo lường (Measure)
 Định nghĩa cách bạn biết chiến dịch có thành công hay không. Xem Chỉ số thành công theo loại chiến dịch bên dưới.
@@ -164,10 +165,10 @@ Chọn kênh dựa trên nơi đối tượng của bạn có mặt, không ph�
 
 | Kênh | Phù hợp nhất | Chỉ số điển hình | Công sức |
 |---------|----------|----------------|--------|
-| Blog/Website | SEO, thought leadership, giáo dục | Traffic, thời gian trên trang, chuyển đổi | Trung bình |
+| Website | SEO, thought leadership, giáo dục | User, thời gian trên trang, chuyển đổi | Trung bình |
 | Email | Nuôi dưỡng, giữ chân, thông báo | Open rate, CTR, chuyển đổi | Thấp-Trung bình |
 | Social (organic) | Nhận diện, cộng đồng, xây thương hiệu | Tương tác, reach, tăng followers | Trung bình |
-| Webinar | Giáo dục, tạo leads, demo sản phẩm | Đăng ký, attendance, pipeline | Cao |
+| Sự kiện | Giáo dục, tạo leads, demo sản phẩm | Đăng ký, attendance, pipeline | Cao |
 | Podcast | Thought leadership, nhận diện thương hiệu | Lượt tải, tăng subscribers | Cao |
 
 #### Kênh Earned
@@ -213,14 +214,14 @@ Khi chọn kênh, cân nhắc:
 - **Email newsletter**: hàng tuần hoặc hai tuần một lần với hầu hết đối tượng
 - **Social media**: 3-7 bài mỗi tuần mỗi nền tảng (tùy nền tảng)
 - **Paid campaigns**: chạy liên tục trong cửa sổ chiến dịch, làm mới creative mỗi 2-4 tuần
-- **Webinar**: hàng tháng hoặc hàng quý tùy nguồn lực
+- **Sự kiện**: hàng tháng hoặc hàng quý tùy nguồn lực
 
 #### Thời gian sản xuất tham khảo
-- Blog post: 3-5 ngày làm việc (nghiên cứu, nháp, review, xuất bản)
-- Email campaign: 2-3 ngày làm việc (copy, thiết kế, test, gửi)
-- Social media posts: 1-2 ngày làm việc (nháp, thiết kế, lên lịch)
-- Landing page: 5-7 ngày làm việc (copy, thiết kế, phát triển, QA)
-- Nội dung video: 2-4 tuần (kịch bản, sản xuất, biên tập)
+- Bài viết website: 2-3 ngày làm việc (nghiên cứu, nháp, review, xuất bản)
+- Email campaign: 1-2 ngày làm việc (copy, thiết kế, test, gửi)
+- Social media posts: 1 ngày làm việc (nháp, thiết kế, lên lịch)
+- Landing page: 3-4 ngày làm việc (copy, thiết kế, phát triển, QA)
+- Nội dung video: 5-7 ngày làm việc (kịch bản, sản xuất, biên tập)
 - Ebook/whitepaper: 2-4 tuần (outline, nháp, thiết kế, review)
 
 ### Phương pháp phân bổ ngân sách
@@ -235,20 +236,20 @@ Framework bắt đầu phổ biến (điều chỉnh theo mục tiêu và dữ l
 
 | Hạng mục | Tỷ lệ ngân sách | Ví dụ |
 |----------|----------------|-------|
-| Paid acquisition | 30-40% | Search ads, social ads, display |
+| Paid acquisition | 30-40% | Search ads, social ads, chatgpt ads, display |
 | Sản xuất nội dung | 20-30% | Blog, video, thiết kế, ebook |
-| Sự kiện và tài trợ | 10-20% | Hội nghị, webinar, meetup |
-| Công cụ và công nghệ | 10-15% | Analytics, automation, CRM |
+| Sự kiện và tài trợ | 10-20% | Hội nghị, webinar, meetup, tài trợ |
+| Công cụ và công nghệ | 10-15% | AI, Analytics, automation, CRM |
 | Thử nghiệm | 5-10% | Kênh mới, A/B test, pilot |
 
 #### Nguyên tắc tối ưu ngân sách
 - Bắt đầu với kênh có độ tin cậy cao nhất và phân bổ 60-70% ngân sách paid vào đó
 - Dành 15-20% để thử kênh hoặc tactic mới
-- Chuyển ngân sách hàng tháng dựa trên dữ liệu hiệu quả (đừng đặt rồi quên)
+- Review ngân sách hàng tháng dựa trên dữ liệu hiệu quả (đừng đặt cố định mãi theo thời gian)
 - Tính cả chi phí sản xuất, không chỉ chi phí media
 - Dành 10-15% dự phòng cho cơ hội bất ngờ hoặc vượt chi
 
-### Chỉ số thành công theo loại chiến dịch
+### KPI theo loại chiến dịch
 
 #### Chiến dịch nhận diện (Awareness)
 | Chỉ số | Đo lường điều gì |
@@ -262,19 +263,19 @@ Framework bắt đầu phổ biến (điều chỉnh theo mục tiêu và dữ l
 #### Chiến dịch tạo leads
 | Chỉ số | Đo lường điều gì |
 |--------|-----------------|
-| Tổng leads | Số lượng liên hệ mới |
-| Marketing qualified leads (MQLs) | Leads đạt ngưỡng chất lượng |
+| Tổng leads | Số lượng lead mới |
+| Marketing qualified leads (MQLs) | Leads thỏa tiêu chí chất lượng |
 | Chi phí mỗi lead (CPL) | Hiệu quả chi tiêu |
 | Tỷ lệ lead-to-MQL | Chất lượng leads tạo ra |
-| Pipeline bị ảnh hưởng | Cơ hội doanh thu tạo ra |
+| Pipeline | Cơ hội doanh thu tạo ra |
 
-#### Chiến dịch ra mắt sản phẩm
+#### Chiến dịch ra mắt sản phẩm hoặc tái tung
 | Chỉ số | Đo lường điều gì |
 |--------|-----------------|
 | Đăng ký hoặc dùng thử | Mức độ chấp nhận sản phẩm mới |
 | Tỷ lệ kích hoạt (Activation) | Người dùng hoàn thành hành động đầu tiên then chốt |
 | Media coverage | Lượt báo chí earned |
-| Social buzz | Mentions, shares, tăng tương tác |
+| Social mentions | Mentions, shares, tương tác |
 | Mức độ dùng tính năng | Người dùng tính năng mới ra mắt |
 
 #### Chiến dịch giữ chân/tương tác
@@ -293,7 +294,7 @@ Framework bắt đầu phổ biến (điều chỉnh theo mục tiêu và dữ l
 | Tỷ lệ tham dự | Chuyển đổi từ đăng ký |
 | Tương tác trong sự kiện | Câu hỏi, poll, hoạt động chat |
 | Chuyển đổi sau sự kiện | Leads hoặc pipeline từ người tham dự |
-| Độ phủ tái sử dụng nội dung | Đối tượng downstream từ bản ghi hình |
+| Độ phủ tái sử dụng nội dung | Đối tượng downstream từ bản record, đăng lại slide |
 
 ## Đầu ra
 

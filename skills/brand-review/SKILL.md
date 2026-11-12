@@ -4,7 +4,7 @@ description: "Review nội dung đối chiếu với brand voice, style guide v�
 argument-hint: "<nội dung cần review>"
 ---
 
-# Review thương hiệu (Brand Review)
+# Brand Review
 
 Review nội dung marketing đối chiếu với brand voice, style guidelines và tiêu chuẩn thông điệp. Đánh dấu các điểm lệch và đưa gợi ý cải thiện cụ thể.
 
@@ -16,7 +16,7 @@ Người dùng chạy `/brand-review` hoặc yêu cầu review, kiểm tra, audi
 
 1. **Nội dung cần review** — nhận nội dung dưới dạng:
    - Dán trực tiếp vào cuộc trò chuyện
-   - Đường dẫn file hoặc tham chiếu tới knowledge base (ví dụ: trang Notion, shared doc)
+   - Đường dẫn file hoặc tham chiếu tới knowledge base
    - URL tới trang đã xuất bản
    - Nhiều nội dung để review hàng loạt
 
@@ -73,12 +73,12 @@ Người dùng chạy `/brand-review` hoặc yêu cầu review, kiểm tra, audi
 - Tone có phù hợp với đối tượng mục tiêu không?
 - Tuyên bố có được hậu thuẫn hoặc có căn cứ không?
 
-### Cờ pháp lý và tuân thủ (luôn kiểm tra)
+### Pháp lý và tuân thủ (luôn kiểm tra)
 
 Bất kể đã cấu hình guidelines hay chưa, luôn đánh dấu:
 - **Tuyên bố không có căn cứ** — tính từ nhất ("tốt nhất", "nhanh nhất", "duy nhất") không có bằng chứng đi kèm
 - **Thiếu disclaimer** — tuyên bố về tài chính, sức khỏe, hoặc cam kết có thể cần disclaimer pháp lý
-- **Tuyên bố so sánh** — so sánh với đối thủ có thể bị thách thức
+- **Tuyên bố so sánh** — so sánh trực tiếp với đối thủ có thể tạo rủi ro
 - **Ngôn ngữ pháp lý** — nội dung có thể cần review pháp lý (dịch vụ tài chính, y tế...)
 - **Vấn đề testimonial** — quote hoặc đánh giá không có nguồn hoặc không công bố quan hệ
 - **Vấn đề bản quyền** — nội dung dường như diễn giải lại quá sát từ nguồn khác
@@ -89,21 +89,21 @@ Dùng các framework này để đánh giá nội dung đối chiếu với tiê
 
 ### Framework tài liệu brand voice
 
-Một tài liệu brand voice đầy đủ nên bao phủ các lĩnh vực sau:
+Một tài liệu brand voice đầy đủ nên bao gồm các lĩnh vực sau:
 
-1. **Brand personality** — Định nghĩa thương hiệu như một con người. Ví dụ: "Nếu thương hiệu của chúng ta là một con người, đó sẽ là đồng nghiệp am hiểu, giải thích điều phức tạp đơn giản, thật lòng ăn mừng thắng lợi của bạn và không bao giờ tỏ ra bề trên."
+1. **Brand personality** — Định nghĩa thương hiệu như một con người. Ví dụ: "Nếu thương hiệu của chúng ta là một con người, người đó sẽ như thế nào?"
 2. **Thuộc tính brand voice** — 3-5 thuộc tính định nghĩa cách thương hiệu giao tiếp, mỗi thuộc tính gồm: ý nghĩa thực tế, ý nghĩa "không phải" (để tránh hiểu lầm), và ví dụ.
-3. **Nhận thức đối tượng** — thương hiệu nói với ai (chính và phụ), họ quan tâm gì, trình độ chuyên môn, và cách họ muốn được xưng hô.
-4. **Trụ cột thông điệp cốt lõi** — 3-5 chủ đề chính thương hiệu luôn truyền đạt, thứ bậc các thông điệp, và cách mỗi trụ cột gắn với nhu cầu đối tượng.
-5. **Phổ tone (Tone spectrum)** — giọng điệu thay đổi thế nào qua các bối cảnh nhưng vẫn nhận ra là cùng một thương hiệu.
+3. **Đối tượng mục tiêu** — thương hiệu nói với ai (chính và phụ), họ quan tâm gì, trình độ chuyên môn, và cách họ muốn được xưng hô.
+4. **Trụ cột thông điệp cốt lõi** — 3-5 chủ đề chính thương hiệu luôn truyền đạt, mức độ ưu tiên các thông điệp, và cách mỗi trụ cột gắn với nhu cầu đối tượng.
+5. **Tone spectrum** — giọng điệu thay đổi thế nào qua các bối cảnh nhưng vẫn nhận ra là cùng một thương hiệu.
 6. **Quy tắc style** — quy tắc ngữ pháp, định dạng và ngôn ngữ cụ thể.
 7. **Thuật ngữ** — danh sách thuật ngữ ưu tiên và cần tránh.
 
-### Phổ thuộc tính voice
+### Thang thuộc tính voice
 
-Khi định nghĩa hoặc đánh giá brand voice, định vị các thuộc tính trên phổ:
+Khi định nghĩa hoặc đánh giá brand voice, định vị các thuộc tính trên thang điểm:
 
-| Phổ | Một cực | Cực còn lại |
+| Thuộc tính | Cao nhất | Thấp nhất |
 |----------|---------|-------------|
 | Độ trang trọng | Trang trọng, có tổ chức | Thân mật, gần gũi |
 | Thẩm quyền | Chuyên gia, có thẩm quyền | Bình đẳng, cộng tác |
@@ -118,16 +118,16 @@ Với mỗi thuộc tính đã chọn, ghi theo format:
 **[Tên thuộc tính]**
 - **Chúng ta là**: [ý nghĩa thực tế]
 - **Chúng ta không phải**: [hiểu lầm thường gặp cần tránh]
-- **Nghe như**: [câu ví dụ thể hiện thuộc tính]
-- **Không nghe như**: [câu ví dụ vi phạm thuộc tính]
+- **Cách nói minh họa**: [câu ví dụ thể hiện thuộc tính]
+- **Cách nói cần tránh**: [câu ví dụ vi phạm thuộc tính]
 
 Ví dụ:
 
 **Gần gũi (Approachable)**
 - **Chúng ta là**: thân thiện, rõ ràng, không chuyên môn sâu, chào đón cả người mới lẫn người có kinh nghiệm
 - **Chúng ta không phải**: đơn giản hóa quá đà, quá thân mật, hoặc thiếu nội dung
-- **Nghe như**: "Dưới đây là cách bắt đầu, chỉ mất khoảng 5 phút."
-- **Không nghe như**: slang mạng, cợt nhả quá mức.
+- **Cách nói minh họa**: "Dưới đây là cách bắt đầu, chỉ mất khoảng 5 phút."
+- **Cách nói cần tránh**: slang mạng, cợt nhả quá mức.
 
 ### Điều chỉnh tone theo kênh và bối cảnh
 
@@ -137,14 +137,14 @@ Brand voice giữ nhất quán, tone điều chỉnh theo bối cảnh. Tone là
 
 | Kênh | Điều chỉnh tone | Ví dụ |
 |---------|----------------|---------|
-| Blog | Cung cấp thông tin, gần gũi, giáo dục | "Hãy cùng nhau tìm hiểu cách này hoạt động và vì sao nó quan trọng với team bạn." |
+| Blog | Cung cấp thông tin, gần gũi, giáo dục | "Hãy cùng nhau tìm hiểu cách ứng dụng này hoạt động và vì sao nó quan trọng với team bạn." |
 | Social media (LinkedIn) | Chuyên nghiệp, gợi suy nghĩ, súc tích | "Ba điều chúng tôi rút ra từ 50 chiến dịch trong quý này." |
 | Social media (X/Twitter) | Ngắn gọn, trực tiếp, đôi khi dí dỏm | "Landing page của bạn có 3 giây. Hãy tận dụng tốt." |
 | Email marketing | Cá nhân, hữu ích, hướng hành động | "Chúng tôi đã chuẩn bị một thứ bạn có thể thấy hữu ích." |
-| Sales collateral | Tự tin, nhấn vào lợi ích, cụ thể | "Team dùng nền tảng của chúng tôi giảm thời gian báo cáo 40%." |
+| Sales collateral | Tự tin, nhấn vào lợi ích, cụ thể | "Team dùng nền tảng của chúng tôi giảm thời gian báo cáo đến 40%." |
 | Tài liệu hỗ trợ | Rõ ràng, kiên nhẫn, từng bước | "Nếu gặp lỗi này, dưới đây là cách sửa." |
 | Thông cáo báo chí | Trang trọng, thực tế | "Hôm nay công ty công bố ra mắt..." |
-| Thông báo lỗi | Đồng cảm, hỗ trợ, không đổ blame | "Có sự cố ở phía chúng tôi. Đang kiểm tra." |
+| Thông báo lỗi | Đồng cảm, hỗ trợ, không đổ lỗi | "Có sự cố ở phía chúng tôi. Đang kiểm tra." |
 
 #### Tone theo tình huống
 
@@ -174,10 +174,10 @@ Ghi và thực thi các lựa chọn nhất quán:
 | Dấu phẩy Oxford | Có / Không | "nhanh, tin cậy và an toàn" vs "nhanh, tin cậy, an toàn" |
 | Viết hoa tiêu đề | Câu / Title Case | "Cách bắt đầu" vs "Cách Bắt Đầu" |
 | Rút gọn (contractions) | Dùng / Tránh | "chúng tôi" vs cách rút gọn (áp dụng cho tiếng Anh: "we're" vs "we are") |
-| Khoảng cách quanh gạch ngang em dash | Không / Có | "điều này – và hơn nữa" vs "điều này—và hơn nữa" |
+| Khoảng cách quanh gạch ngang em dash | Không / Có | "điều này – và hơn nữa" vs "điều này - và hơn nữa" |
 | Số | Viết chữ 1-9, số 10+ / Luôn dùng số | "năm tính năng" vs "5 tính năng" |
 | Phần trăm | % / chữ | "50%" vs "50 phần trăm" |
-| Định dạng ngày | Tháng DD, YYYY / DD/MM/YYYY | "15/01/2025" hoặc "January 15, 2025" |
+| Định dạng ngày | Tháng DD, YYYY / DD/MM/YYYY | "15/01/2026" hoặc "January 15, 2026" |
 | Định dạng giờ | 12 giờ / 24 giờ | "15:00" vs "3:00 PM" |
 | Danh sách | Có dấu chấm / Không | "Thiết lập tài khoản." vs "Thiết lập tài khoản" |
 
@@ -187,7 +187,7 @@ Ghi và thực thi các lựa chọn nhất quán:
 - Link text (mô tả rõ, không dùng "click here")
 - Yêu cầu alt text cho hình ảnh
 - Cách viết code (với thương hiệu kỹ thuật)
-- Cách dùng callout hoặc hộp highlight
+- Cách dùng callout hoặc highlight
 
 #### Dấu câu và nhấn mạnh
 - Chính sách dấu chấm than (dùng ít, không bao giờ hơn 1)
@@ -213,15 +213,14 @@ Duy trì danh sách thuật ngữ ưu tiên và lựa chọn sai:
 #### Tên sản phẩm và tính năng
 - Cách viết hoa chính thức cho tên sản phẩm
 - Khi nào dùng tên sản phẩm đầy đủ vs viết tắt
-- Có dùng "the" trước tên sản phẩm không
 - Cách xử lý phiên bản trong copy
 - Ký hiệu trademark (khi bắt buộc và khi bỏ qua)
 
 #### Ngôn ngữ bao quát (Inclusive language)
-- Dùng ngôn ngữ trung tính giới tính
+- Dùng ngôn ngữ trung tính về giới tính
 - Tránh ngôn ngữ phân biệt khả năng ("crazy", "blind spot", "lame")
-- Dùng người trước, khuyết tật sau ở nơi phù hợp
-- Tránh thành ngữ đặc thù văn hóa khó dịch
+- Dùng người trước, khuyết tật sau ở ngữ cảnh phù hợp
+- Tránh thành ngữ đặc thù văn hóa không phổ biến
 - Dùng "đơn giản", "thẳng thắn" thay vì "dễ" (độ dễ tùy thuộc từng người)
 
 #### Quản lý jargon ngành
@@ -261,7 +260,7 @@ Trong đó mức độ là:
 
 Với 3-5 vấn đề mức cao nhất, đưa bản trước/sau: nội dung gốc và gợi ý sửa.
 
-### Cờ pháp lý/tuân thủ
+### Pháp lý/tuân thủ
 
 Liệt kê riêng các vấn đề pháp lý hoặc tuân thủ kèm hành động đề xuất.
 
