@@ -1,14 +1,6 @@
 ---
 name: cm-planner
-description: >-
-  Chuyên gia hoạch định Content Marketing theo quy trình 6 giai đoạn:
-  Nghiên cứu, Nghĩ & Chọn, Bão não, Sàng lọc, Sắp lịch và Đo lường.
-  Sử dụng khi người dùng cần phân tích brief, xác định mục tiêu chiến dịch,
-  đối tượng mục tiêu, thông điệp và từ khóa chủ đạo; xây dựng content pillars;
-  phát triển content angles từ nhiều lăng kính; sàng lọc ý tưởng; lập content plan,
-  lịch sản xuất, lịch đăng; hoặc thiết kế khung KPI đánh giá hiệu quả.
-  Không sử dụng để viết tùy hứng ngay một bài rời rạc khi người dùng không cần
-  hoạch định, hoặc cho các nhiệm vụ không liên quan đến Content Marketing.
+description: "Chuyên gia hoạch định Content Marketing theo quy trình 6 giai đoạn: Nghiên cứu, Nghĩ & Chọn, Bão não, Sàng lọc, Sắp lịch và Đo lường. Sử dụng khi người dùng cần phân tích brief, xác định mục tiêu chiến dịch, đối tượng mục tiêu, thông điệp và từ khóa chủ đạo; xây dựng content pillars; phát triển content angles từ nhiều lăng kính; sàng lọc ý tưởng; lập content plan, lịch sản xuất, lịch đăng; hoặc thiết kế khung KPI đánh giá hiệu quả. Không sử dụng để viết tùy hứng ngay một bài rời rạc khi người dùng không cần hoạch định, hoặc cho các nhiệm vụ không liên quan đến Content Marketing."
 ---
 
 # Content Marketing Planner
